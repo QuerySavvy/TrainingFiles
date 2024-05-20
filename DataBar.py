@@ -11,5 +11,5 @@ if sidebarbutton == True:
 #add a container bar
 containerbutton = st.button("Add container")
 if containerbutton == True:
-  with st.container():
+  with st.container(border=True):
     st.write("Yipeeee")
