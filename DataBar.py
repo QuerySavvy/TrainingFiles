@@ -3,8 +3,8 @@ import time
 
 
 st.title("Open Data Bar - Streamlit Demo")
-seassion_state = st.session_state
-seassion_state
+session_state = st.session_state
+session_state
 
 #Page setup
 page1, page2, page3 = st.tabs(["Page 1", "Page 2", "Page 3"])
