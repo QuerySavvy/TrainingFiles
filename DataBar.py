@@ -12,7 +12,7 @@ page1, page2, page3 = st.tabs(["Page 1", "Page 2", "Page 3"])
 
 with page1:
     if "header" not in session_state:
-        st.session_state['header'] = "page1"
+        session_state['header'] = "page1"
     st.header("Beginner Streamlit")
     col1, col2, col3= st.columns(3)
     with col1: #Add the buttons
