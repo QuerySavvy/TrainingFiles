@@ -13,19 +13,20 @@ with page1:
         containerbutton = st.button("Add container") #-- add a container
         
 if sidebarbutton == True:
-st.sidebar.write("Yipeeee")
-#Show the code
-code = '''sidebarbutton = st.button("Add sidebar")
-if sidebarbutton == True:
-st.sidebar.write("Yipeeee")'''
-st.code(code, language='python')
+    st.sidebar.write("Yipeeee")
+    #Show the code
+    code = '''sidebarbutton = st.button("Add sidebar")
+    if sidebarbutton == True:
+        st.sidebar.write("Yipeeee")'''
+    st.code(code, language='python')
 
 #add a container bar
 if containerbutton == True:
-with st.container(border=True):
-    st.write("Yipeeee")
-    #Show the code
-    code = '''if containerbutton == True:
-with st.container(border=True):
-    st.write("Yipeeee")'''
-    st.code(code, language='python')
+    with st.container(border=True):
+        st.write("Yipeeee")
+        #Show the code
+        code = '''containerbutton = st.button("Add container")
+        if containerbutton == True:
+            with st.container(border=True):
+            st.write("Yipeeee")'''
+        st.code(code, language='python')
