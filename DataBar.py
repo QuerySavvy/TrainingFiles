@@ -179,7 +179,7 @@ with page2:
     st.write("Launched in 2019. Limited information available besides the official docs. ChatGPT-3.5 goes up to Jan 2022 so isnt very helpful.")
     st.header("Execition limitations")
     taco = st.button("Make a Taco")
-    if order:
+    if taco:
         col_1, col_2, col_3 = st.columns(3)
         with col_1:
             st.radio("Choose a size",["mini", "une viande", "deux viandes"])
