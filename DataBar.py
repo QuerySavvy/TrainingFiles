@@ -9,8 +9,8 @@ col1, col2, col3 = st.columns(3)
 with page1:
     with col1: #Add the buttons
         st.subheader("layouts")
-        sidebarbutton = st.button("Add sidebar") #-- add a side bar
-        containerbutton = st.button("Add container") #-- add a container
+        sidebarbutton = st.button("st.sidebar") #-- add a side bar
+        containerbutton = st.button("st.container") #-- add a container
         
 if sidebarbutton == True:
     st.sidebar.write("Yipeeee")
