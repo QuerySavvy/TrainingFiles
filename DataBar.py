@@ -141,6 +141,12 @@ options = st.selectbox("Please select an option",
         ["Emmental", "Bleu", "Chevre"]
         )
         uploaded_files = st.file_uploader("Please upload a file")
+        code = '''agree = st.checkbox("I agree")
+genre = st.radio("What is your favourite cheese",
+["Emmental", "Bleu", "Chevre"]
+)
+uploaded_files = st.file_uploader("Please upload a file")'''
+        st.code(code, language='python')
 
 
 with page2:
