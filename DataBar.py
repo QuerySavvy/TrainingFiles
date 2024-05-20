@@ -18,6 +18,7 @@ with page1:
         tabsbutton = st.button("st.tabs") #-- add page tabs
 
     if tabsbutton == True:
+        st.divider()
         #Show the code
         code = '''page1, page2, page3 = st.tabs(["Page 1", "Page 2", "Page 3"])
 with page1:
@@ -27,6 +28,7 @@ with page1:
         tabsbutton = st.button("st.tabs") #-- add page tabs'''
         st.code(code, language='python')
     if sidebarbutton == True:
+        st.divider()
         st.sidebar.write("Yipeeee")
         #Show the code
         code = '''sidebarbutton = st.button("Add sidebar")
@@ -36,6 +38,7 @@ if sidebarbutton == True:
     
     #add a container 
     if containerbutton == True:
+        st.divider()
         with st.container(border=True):
             st.write("Yipeeee")
             #Show the code
@@ -48,6 +51,7 @@ if containerbutton == True:
     
     #add columns
     if columnbutton == True:
+        st.divider()
         col_1, col_2, col_3 = st.columns(3)
         with col_1:
             st.write("col_1")
@@ -90,12 +94,14 @@ if columnbutton == True:
         texttext = st.button("st.text")
 
     if commontext == True:
+        st.divider()
         st.title("This is st.title")
         st.header("This is st.header")
         st.subheader("This is st.subheader")
         st.write("This is st.write")
 
     if codetext == True:
+        st.divider()
         code = '''SELECT employee,
 salary 
 
@@ -107,6 +113,7 @@ ORDER BY salary DESC'''
         st.code(code, language='SQL')
 
     if texttext == True:
+        st.divider()
         st.text("Merci - Nous avons bien reçu votre demande")
         
     with col3: #Add the buttons
@@ -115,12 +122,12 @@ ORDER BY salary DESC'''
         clicks = st.button("Clicks")
         
     if textinput == True:
+        st.divider()
         st.text_input("Please enter a message", 
                       placeholder = "This is made with st.text_input")
         options = st.selectbox("Please select an option",
                      ("Option 1", "Option 2", "Option 3"))
         
-        st.divider()
         code = '''st.text_input("Please enter a message", 
               placeholder = "This is made with st.text_input")
 options = st.selectbox("Please select an option",
@@ -128,6 +135,7 @@ options = st.selectbox("Please select an option",
         st.code(code, language='python')
 
     if clicks == True:
+        st.divider()
         agree = st.checkbox("I agree")
         genre = st.radio("What is your favourite cheese",
         ["Emmental", "*Bleu", "Chevre"]
