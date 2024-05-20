@@ -116,6 +116,11 @@ ORDER BY salary DESC'''
         
     if textinput == True:
         st.text_input("Please enter a message", placeholder = "Awiting input")
+        option = st.selectbox(
+        "How would you like to be contacted?",
+        ("Email", "Home phone", "Mobile phone"))
+
+st.write("You selected:", option)
 
 with page2:
     st.write("Test")
