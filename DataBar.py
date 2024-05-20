@@ -42,7 +42,7 @@ if columnbutton == True:
         st.write("col_2")
     with col_3:
         st.write("col_3")
-        col_1, col_2, col_3 = st.columns([.1,.8,.1])
+        col_1, col_2, col_3 = st.columns([0.1,0.7, 0.1])
     with col_1:
         st.write("col_1")
     with col_2:
