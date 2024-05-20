@@ -11,7 +11,7 @@ page1, page2, page3 = st.tabs(["Page 1", "Page 2", "Page 3"])
 with page1:
     col1, col2, col3 = st.columns(3)
     with col1: #Add the buttons
-        st.subheader("layouts")
+        st.subheader("Layouts")
         tabsbutton = st.button("st.tabs") #-- add page tabs
         sidebarbutton = st.button("st.sidebar") #-- add a side bar
         containerbutton = st.button("st.container") #-- add a container
@@ -79,6 +79,29 @@ if columnbutton == True:
     with col_3:
         st.write("col_3")'''
         st.code(code, language='python')
+        
+    with col2: #Add the buttons
+        st.subheader("Text options")
+        commontext = st.button("Show common text") 
+        codetext = st.button("st.code")
+        texttext = st.button("st.text")
+
+        if commontext == True:
+            st.title("This is st.title")
+            st.header("This is st.header")
+            st.subheader("This is st.subheader")
+            st.write("This is st.write")
+
+        if codetext == True:
+            code = '''SELECT employee,
+salary 
+
+FROM hardis
+
+WHERE salary>100000
+
+ORDER BY salary DESC'''
+        st.code(code, language='SQL')
 
 with page2:
     st.write("Test")
