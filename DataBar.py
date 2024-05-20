@@ -144,7 +144,7 @@ options = st.selectbox("Please select an option",
         st.divider()
         agree = st.checkbox("I agree")
         genre = st.radio("What is your favourite cheese",
-        ["Emmental", "Bleu", "Chevre"]        )
+        ["Emmental", "Bleu", "Chevre"])
         uploaded_files = st.file_uploader("Please upload a file")
         code = '''agree = st.checkbox("I agree")
 genre = st.radio("What is your favourite cheese",
@@ -177,6 +177,12 @@ st.error("st.error", icon="😱")'''
 with page2:
     st.write("Page2Selected")
     st.write("Launched in 2019. Limited information available besides the official docs. ChatGPT-3.5 goes up to Jan 2022 so isnt very helpful.")
+    st.header("Execition limitations")
+    order = st.buttion("Order cheese"):
+    if order:
+        st.radio("What is your favourite cheese",
+        ["Emmental", "Bleu", "Chevre"])
+    
     st.write("session state")
     st.write("placeholder")
     st.write("placeholder")
