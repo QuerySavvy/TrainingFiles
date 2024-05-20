@@ -4,7 +4,7 @@ import time
 
 st.title("Open Data Bar - Streamlit Demo")
 session_state = st.session_state
-if "header" not session_state:
+if "header" not in session_state:
     session_state['header'] = None
 session_state
 
