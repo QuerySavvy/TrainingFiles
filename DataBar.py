@@ -12,4 +12,4 @@ if sidebarbutton == True:
 containerbutton = st.button("Add container")
 if containerbutton == True:
   with st.container():
-    write("Yipeeee")
+    st.write("Yipeeee")
