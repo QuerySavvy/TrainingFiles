@@ -20,7 +20,7 @@ with page1:
     if tabsbutton == True:
         #Show the code
         code = '''page1, page2, page3 = st.tabs(["Page 1", "Page 2", "Page 3"])
-    with page1:
+with page1:
     col1, col2, col3 = st.columns(3)
     with col1: #Add the buttons
         st.subheader("Layouts")
