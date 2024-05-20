@@ -42,7 +42,8 @@ if columnbutton == True:
         st.write("col_2")
     with col_3:
         st.write("col_3")
-        col_1, col_2, col_3 = st.columns([0.1,0.7, 0.1])
+        
+    col_1, col_2, col_3 = st.columns([0.1,0.7, 0.1])
     with col_1:
         st.write("col_1")
     with col_2:
@@ -50,14 +51,16 @@ if columnbutton == True:
     with col_3:
         st.write("col_3")
         #Show the code
-    code = '''    col_1, col_2, col_3 = st.columns(3)
+    code = '''if columnbutton == True:
+    col_1, col_2, col_3 = st.columns(3)
     with col_1:
         st.write("col_1")
     with col_2:
         st.write("col_2")
     with col_3:
         st.write("col_3")
-        col_1, col_2, col_3 = st.columns([0.1,.8, 0.3])
+        
+    col_1, col_2, col_3 = st.columns([0.1,0.7, 0.1])
     with col_1:
         st.write("col_1")
     with col_2:
