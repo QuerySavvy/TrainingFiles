@@ -111,7 +111,7 @@ FROM hardis
 WHERE salary>100000
 
 ORDER BY salary DESC'''
-        st.code(code, language='SQL')
+        st.code(code, language='sql')
 
     if texttext == True:
         st.divider()
@@ -155,7 +155,7 @@ uploaded_files = st.file_uploader("Please upload a file")'''
     if loading:
         st.divider()
         with st.spinner('loading...'):
-            time.sleep(5)
+            time.sleep(3)
             st.success('Done!')
         code = '''with st.spinner('loading...'):
     time.sleep(5)
