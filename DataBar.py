@@ -1,4 +1,5 @@
 import streamlit as st
+import time
 
 st.title("Open Data Bar - Streamlit Demo")
 st.subheader("Whats possible, limitations, and solutions")
