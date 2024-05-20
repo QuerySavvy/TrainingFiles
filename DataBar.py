@@ -101,7 +101,7 @@ FROM hardis
 WHERE salary>100000
 
 ORDER BY salary DESC'''
-        st.code(code, language='SQL')
+            st.code(code, language='SQL')
 
 with page2:
     st.write("Test")
