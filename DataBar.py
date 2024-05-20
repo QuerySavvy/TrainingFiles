@@ -21,7 +21,7 @@ with page1:
         #Show the code
         code = '''page1, page2, page3 = st.tabs(["Page 1", "Page 2", "Page 3"])
         with page1:
-            st.write("Hello World"'''
+            st.write("Hello World")'''
         st.code(code, language='python')
     if sidebarbutton == True:
         st.sidebar.write("Yipeeee")
