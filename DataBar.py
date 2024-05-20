@@ -26,7 +26,7 @@ if containerbutton == True:
         st.write("Yipeeee")
         #Show the code
         code = '''containerbutton = st.button("Add container")
-        if containerbutton == True:
-            with st.container(border=True):
-            st.write("Yipeeee")'''
+if containerbutton == True:
+    with st.container(border=True):
+        st.write("Yipeeee")'''
         st.code(code, language='python')
