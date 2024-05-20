@@ -12,10 +12,10 @@ with page1:
     col1, col2, col3 = st.columns(3)
     with col1: #Add the buttons
         st.subheader("Layouts")
-        tabsbutton = st.button("st.tabs") #-- add page tabs
         sidebarbutton = st.button("st.sidebar") #-- add a side bar
         containerbutton = st.button("st.container") #-- add a container
         columnbutton = st.button("st.columns") #-- add columns
+        tabsbutton = st.button("st.tabs") #-- add page tabs
 
     if tabsbutton == True:
         #Show the code
