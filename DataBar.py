@@ -197,7 +197,7 @@ with page2:
             st.multiselect("Choose the meat",["Poulet panné", "Cordon bleu", "kebab"])
         with col_3:
             st.multiselect("Choose the sauce",["Allondoise", "Algerienne", "Blanche"])'''
-        st.code(code, language='python')
+            st.code(code, language='python')
     
     st.write("session state")
     st.write("placeholder")
