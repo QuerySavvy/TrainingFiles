@@ -161,7 +161,7 @@ uploaded_files = st.file_uploader("Please upload a file")'''
             
     if warnings:
         st.divider()
-        st.success("st.success", "🚀")
+        st.success("st.success", icon="🚀")
     
 
 with page2:
