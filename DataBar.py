@@ -11,6 +11,7 @@ with page1:
         st.subheader("layouts")
         sidebarbutton = st.button("st.sidebar") #-- add a side bar
         containerbutton = st.button("st.container") #-- add a container
+        columnbutton = st.button("st.columns") #-- add columns
         
 if sidebarbutton == True:
     st.sidebar.write("Yipeeee")
@@ -20,7 +21,7 @@ if sidebarbutton == True:
     st.sidebar.write("Yipeeee")'''
     st.code(code, language='python')
 
-#add a container bar
+#add a container 
 if containerbutton == True:
     with st.container(border=True):
         st.write("Yipeeee")
@@ -32,19 +33,36 @@ if containerbutton == True:
     st.code(code, language='python')
 
 
+#add columns
+if columnbutton == True:
+    col_1, col_2, col_3 = st.columns(3)
+    with col_1:
+        st.write("col_1")
+    with col_2:
+        st.write("col_2")
+    with col_3:
+        st.write("col_3")
+        col_1, col_2, col_3 = st.columns(1.8.1)
+    with col_1:
+        st.write("col_1")
+    with col_2:
+        st.write("col_2")
+    with col_3:
+        st.write("col_3")
+        #Show the code
+    code = '''    col_1, col_2, col_3 = st.columns(3)
+    with col_1:
+        st.write("col_1")
+    with col_2:
+        st.write("col_2")
+    with col_3:
+        st.write("col_3")
+        col_1, col_2, col_3 = st.columns(1.8.1)
+    with col_1:
+        st.write("col_1")
+    with col_2:
+        st.write("col_2")
+    with col_3:
+        st.write("col_3")'''
+    st.code(code, language='python')
 
-placeholder = st.empty()
-
-# Replace the placeholder with some text:
-placeholder.text("Hello")
-
-# Replace the text with a chart:
-placeholder.line_chart({"data": [1, 5, 2, 6]})
-
-# Replace the chart with several elements:
-with placeholder.container():
-    st.write("This is one element")
-    st.write("This is another")
-
-# Clear all those elements:
-placeholder.empty()
