@@ -188,7 +188,7 @@ with page2:
                 meat = st.multiselect("Choose the meat",["Poulet panné", "Cordon bleu", "kebab"])
             with col_3:
                 sauce = st.multiselect("Choose the sauce",["Allondoise", "Algerienne", "Blanche"])
-            st.write("You ordered a " + size + " taco with " + meat + "and" + sauce + "sauce")
+
             code = '''taco = st.button("Make a Taco")
     if taco:
         col_1, col_2, col_3 = st.columns(3)
