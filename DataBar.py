@@ -11,7 +11,7 @@ page1, page2, page3 = st.tabs(["Page 1", "Page 2", "Page 3"])
 
 
 with page1:
-    col1, col2, col3, col4 = st.columns(4)
+    col1, col2, col3= st.columns(3)
     with col1: #Add the buttons
         st.subheader("Layouts")
         sidebarbutton = st.button("st.sidebar") #-- add a side bar
@@ -24,7 +24,7 @@ with page1:
         #Show the code
         code = '''page1, page2, page3 = st.tabs(["Page 1", "Page 2", "Page 3"])
 with page1:
-    col1, col2, col3, col4 = st.columns(4)
+    col1, col2, col3 = st.columns(3)
     with col1: #Add the buttons
         st.subheader("Layouts")
         tabsbutton = st.button("st.tabs") #-- add page tabs'''
@@ -119,9 +119,11 @@ ORDER BY salary DESC'''
         st.text("Merci - Nous avons bien reçu votre demande")
         
     with col3: #Add the buttons
-        st.subheader("User Input")
+        st.subheader("User Interaction")
         textinput = st.button("Text Input")
         clicks = st.button("Clicks")
+        loading = st.button("Loading icon")
+        warnings = st.button("Warnings")
         
     if textinput == True:
         st.divider()
@@ -147,11 +149,6 @@ genre = st.radio("What is your favourite cheese",
 ["Emmental", "Bleu", "Chevre"])
 uploaded_files = st.file_uploader("Please upload a file")'''
         st.code(code, language='python')
-
-    with col4: #Add the buttons
-        st.subheader("User Feedback")
-        loading = st.button("Loading icon")
-        warnings = st.button("Warnings")
 
     if loading:
         st.divider()
