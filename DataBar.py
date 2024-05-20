@@ -3,8 +3,6 @@ import time
 
 
 st.title("Open Data Bar - Streamlit Demo")
-st.header("Whats possible, limitations, and solutions")
-
 
 #Page setup
 page1, page2, page3 = st.tabs(["Page 1", "Page 2", "Page 3"])
