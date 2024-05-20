@@ -154,9 +154,15 @@ uploaded_files = st.file_uploader("Please upload a file")'''
         warnings = st.button("Warnings")
 
     if loading:
-        with st.spinner('Wait for it...'):
+        st.divider()
+        with st.spinner('loading...'):
             time.sleep(5)
             st.success('Done!')
+            
+    if warnings:
+        st.divider()
+        st.success('st.success', 🚀)
+    
 
 with page2:
     st.write("Test")
