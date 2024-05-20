@@ -82,7 +82,7 @@ if columnbutton == True:
         
     with col2: #Add the buttons
         st.subheader("Text options")
-        commontext = st.button("Show common text") 
+        commontext = st.button("Common text elements") 
         codetext = st.button("st.code")
         texttext = st.button("st.text")
 
