@@ -7,6 +7,10 @@ st.subheader("Whats possible, limitations, and solutions")
 sidebarbutton = st.button("Add sidebar")
 if sidebarbutton == True:
   st.sidebar.write("Yipeeee")
+  code = '''sidebarbutton = st.button("Add sidebar")
+  if sidebarbutton == True:
+    st.sidebar.write("Yipeeee")'''
+    st.code(code, language='python')
 
 #add a container bar
 containerbutton = st.button("Add container")
