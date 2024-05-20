@@ -178,7 +178,9 @@ st.error("st.error", icon="😱")'''
         st.code(code, language='python')
     
 with page2:
+    st.write("Page2Selected")
     session_state['header'] = "page2"
 
 with page3:
+    st.write("Page3Selected")
     session_state['header'] = "page3"
