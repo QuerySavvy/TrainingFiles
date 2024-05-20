@@ -115,11 +115,11 @@ ORDER BY salary DESC'''
         multioption = st.button("Multi Option")
         
     if textinput == True:
-        st.text_input("Please enter a message", placeholder = "Awiting input")
-        option = st.selectbox(
-        "How would you like to be contacted?",
-        ("Email", "Home phone", "Mobile phone"))
-        st.write("You selected:", option)
+        st.text_input("Please enter a message", placeholder = "This is made with st.text_input")
+        st.selectbox(
+        "Please select an option",
+        ("Option 1", "Option 2", "Option 3"))
+
 
 with page2:
     st.write("Test")
