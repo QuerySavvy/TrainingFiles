@@ -178,7 +178,7 @@ with page2:
     st.write("Page2Selected")
     st.write("Launched in 2019. Limited information available besides the official docs. ChatGPT-3.5 goes up to Jan 2022 so isnt very helpful.")
     st.header("Execition limitations")
-    with st.container(border=true):
+    with st.container(border=True):
         taco = st.button("Make a Taco")
         if taco:
             col_1, col_2, col_3 = st.columns(3)
