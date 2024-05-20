@@ -146,6 +146,15 @@ genre = st.radio("What is your favourite cheese",
 uploaded_files = st.file_uploader("Please upload a file")'''
         st.code(code, language='python')
 
+    with col4: #Add the buttons
+        st.subheader("User Feedback")
+        loading = st.button("Loading icon")
+        warnings = st.button("Warnings")
+
+    if loading:
+        with st.spinner('Wait for it...'):
+            time.sleep(5)
+            st.success('Done!')
 
 with page2:
     st.write("Test")
