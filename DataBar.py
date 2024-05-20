@@ -4,18 +4,12 @@ import time
 
 st.title("Open Data Bar - Streamlit Demo")
 session_state = st.session_state
-if "header" not in session_state:
-    session_state['header'] = None
-session_state
 
-if session_state['header'] == "page1":
-    st.header("This is dynamic text 😎")
 
 #Page setup
 page1, page2, page3 = st.tabs(["Page 1", "Page 2", "Page 3"])
 
 with page1:
-    session_state['header'] = "page1"
     col1, col2, col3= st.columns(3)
     with col1: #Add the buttons
         st.subheader("Layouts")
@@ -179,11 +173,6 @@ st.error("st.error", icon="😱")'''
     
 with page2:
     st.write("Page2Selected")
-    with st.spinner('loading...'):
-        time.sleep(5)
-        st.success('Done!')
-    session_state['header'] = "page2"
 
 with page3:
     st.write("Page3Selected")
-    session_state['header'] = "page3"
