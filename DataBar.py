@@ -9,7 +9,7 @@ page1, page2, page3 = st.tabs(["Page 1", "Page 2", "Page 3"])
 
 
 with page1:
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3, col4 = st.columns(4)
     with col1: #Add the buttons
         st.subheader("Layouts")
         sidebarbutton = st.button("st.sidebar") #-- add a side bar
