@@ -115,10 +115,14 @@ ORDER BY salary DESC'''
         multioption = st.button("Options")
         
     if textinput == True:
-        st.text_input("Please enter a message", placeholder = "This is made with st.text_input")
-        st.selectbox("Please select an option",("Option 1", "Option 2", "Option 3"))
-        code = '''st.text_input("Please enter a message", placeholder = "This is made with st.text_input")
-        st.selectbox("Please select an option",("Option 1", "Option 2", "Option 3"))'''
+        st.text_input("Please enter a message", 
+                      placeholder = "This is made with st.text_input")
+        st.selectbox("Please select an option",
+                     ("Option 1", "Option 2", "Option 3"))
+        code = '''st.text_input("Please enter a message", 
+              placeholder = "This is made with st.text_input")
+st.selectbox("Please select an option",
+             ("Option 1", "Option 2", "Option 3"))'''
         st.code(code, language='python')
 
     if multioption == True:
