@@ -8,12 +8,11 @@ if "header" not in session_state:
     session_state['header'] = None
 session_state
 
-#Page setup
-page1, page2, page3 = st.tabs(["Page 1", "Page 2", "Page 3"])
-
 if session_state['header'] == "page1":
     st.header("This is dynamic text 😎")
 
+#Page setup
+page1, page2, page3 = st.tabs(["Page 1", "Page 2", "Page 3"])
 
 with page1:
     session_state['header'] = "page1"
