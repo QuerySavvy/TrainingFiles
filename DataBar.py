@@ -86,14 +86,14 @@ if columnbutton == True:
         codetext = st.button("st.code")
         texttext = st.button("st.text")
 
-        if commontext == True:
-            st.title("This is st.title")
-            st.header("This is st.header")
-            st.subheader("This is st.subheader")
-            st.write("This is st.write")
+    if commontext == True:
+        st.title("This is st.title")
+        st.header("This is st.header")
+        st.subheader("This is st.subheader")
+        st.write("This is st.write")
 
-        if codetext == True:
-            code = '''SELECT employee,
+    if codetext == True:
+        code = '''SELECT employee,
 salary 
 
 FROM hardis
@@ -101,7 +101,10 @@ FROM hardis
 WHERE salary>100000
 
 ORDER BY salary DESC'''
-            st.code(code, language='SQL')
+        st.code(code, language='SQL')
+
+    if texttext == True:
+        st.text("Merci - Nous avons bien reçu votre demande")
 
 with page2:
     st.write("Test")
