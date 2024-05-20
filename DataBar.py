@@ -10,6 +10,7 @@ with page1:
   #add a side bar
   sidebarbutton = st.button("Add sidebar")
   with col1:
+    st.write("layouts")
     if sidebarbutton == True:
       st.sidebar.write("Yipeeee")
       #Show the code
