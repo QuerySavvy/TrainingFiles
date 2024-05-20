@@ -179,8 +179,10 @@ st.error("st.error", icon="😱")'''
     
 with page2:
     st.write("Page2Selected")
-    with st.spinner:
-        session_state['header'] = "page2"
+    with st.spinner('loading...'):
+        time.sleep(5)
+        st.success('Done!')
+    session_state['header'] = "page2"
 
 with page3:
     st.write("Page3Selected")
