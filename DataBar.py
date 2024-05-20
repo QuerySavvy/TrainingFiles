@@ -20,10 +20,10 @@ with page1:
     if tabsbutton == True:
         #Show the code
         code = '''with page1:
-col1, col2, col3 = st.columns(3)
-with col1: #Add the buttons
-    st.subheader("Layouts")
-    tabsbutton = st.button("st.tabs") #-- add page tabs'''
+    col1, col2, col3 = st.columns(3)
+    with col1: #Add the buttons
+        st.subheader("Layouts")
+        tabsbutton = st.button("st.tabs") #-- add page tabs'''
         st.code(code, language='python')
     if sidebarbutton == True:
         st.sidebar.write("Yipeeee")
