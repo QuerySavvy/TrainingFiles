@@ -20,7 +20,7 @@ with page1:
         st.sidebar.write("Yipeeee")
         #Show the code
         code = '''sidebarbutton = st.button("Add sidebar")
-    if sidebarbutton == True:
+if sidebarbutton == True:
         st.sidebar.write("Yipeeee")'''
         st.code(code, language='python')
     
@@ -30,7 +30,7 @@ with page1:
             st.write("Yipeeee")
             #Show the code
         code = '''containerbutton = st.button("Add container")
-    if containerbutton == True:
+if containerbutton == True:
         with st.container(border=True):
             st.write("Yipeeee")'''
         st.code(code, language='python')
@@ -55,8 +55,8 @@ with page1:
             st.write("col_3")
             #Show the code
         code = '''columnbutton = st.button("st.columns")
-    if columnbutton == True:
-        col_1, col_2, col_3 = st.columns(3) # 3 columns
+if columnbutton == True:
+        col_1, col_2, col_3 = st.columns(3) 
         with col_1:
             st.write("col_1")
         with col_2:
@@ -64,7 +64,7 @@ with page1:
         with col_3:
             st.write("col_3")
             
-        col_1, col_2, col_3 = st.columns([0.1,0.8, 0.1]) # 3 columns 10%, 80%, 10% width
+        col_1, col_2, col_3 = st.columns([0.1,0.8, 0.1]) 
         with col_1:
             st.write("col_1")
         with col_2:
