@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("Streamlit")
+st.title("Open Data Bar - Streamlit Demo")
 st.subheader("Whats possible, limitations, and solutions")
 
 page1, page2, page3 = st.tabs(["Page 1", "Page 2", "Page 3"])
