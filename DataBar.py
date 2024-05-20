@@ -3,9 +3,7 @@ import time
 
 
 st.title("Open Data Bar - Streamlit Demo")
-if st.session_state['header'] not in st.session_state:
-    if st.session_state['header'] == "page1":
-        st.header("Beginner TEST Streamlit")
+st.session_state
 
 #Page setup
 page1, page2, page3 = st.tabs(["Page 1", "Page 2", "Page 3"])
