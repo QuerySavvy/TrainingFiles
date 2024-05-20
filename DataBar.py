@@ -115,7 +115,7 @@ ORDER BY salary DESC'''
         multioption = st.button("Multi Option")
         
     if textinput == True:
-        st.text_input("Please enter a message", value = "Awiting input")
+        st.text_input("Please enter a message", placeholder = "Awiting input")
 
 with page2:
     st.write("Test")
