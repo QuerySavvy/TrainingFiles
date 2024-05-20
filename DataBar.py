@@ -173,6 +173,14 @@ st.error("st.error", icon="😱")'''
     
 with page2:
     st.write("Page2Selected")
+    st.write("placeholder")
+    st.write("placeholder")
+    st.write("placeholder")
+    st.write("placeholder")
 
 with page3:
     st.write("Page3Selected")
+    st.write("placeholder")
+    st.write("placeholder")
+    st.write("placeholder")
+    st.write("placeholder")
