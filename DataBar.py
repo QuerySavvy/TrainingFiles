@@ -3,7 +3,7 @@ import time
 
 
 st.title("Open Data Bar - Streamlit Demo")
-if st.session_state['header'] in st.session_state:
+if st.session_state['header'] not in st.session_state:
     if st.session_state['header'] == "page1":
         st.header("Beginner TEST Streamlit")
 
