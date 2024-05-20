@@ -178,7 +178,7 @@ with page2:
     st.write("Page2Selected")
     st.write("Launched in 2019. Limited information available besides the official docs. ChatGPT-3.5 goes up to Jan 2022 so isnt very helpful.")
     st.header("Execition limitations")
-    order = st.buttion("Order cheese")
+    order = st.button("Order cheese")
     if order:
         st.radio("What is your favourite cheese",
         ["Emmental", "Bleu", "Chevre"])
