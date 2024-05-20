@@ -120,10 +120,6 @@ ORDER BY salary DESC'''
         options = st.selectbox("Please select an option",
                      ("Option 1", "Option 2", "Option 3"))
         
-        multioptions = st.multiselect(
-        "What are your favorite colors",
-        ["Green", "Yellow", "Red", "Blue"])
-        
         st.divider()
         code = '''st.text_input("Please enter a message", 
               placeholder = "This is made with st.text_input")
@@ -131,10 +127,11 @@ options = st.selectbox("Please select an option",
              ("Option 1", "Option 2", "Option 3"))'''
         st.code(code, language='python')
 
-
-
     if clicks == True:
         agree = st.checkbox("I agree")
+        genre = st.radio("What is your favourite cheese",
+        ["Emmental", "*Bleu", "Chevre"]
+        )
 
 
 with page2:
