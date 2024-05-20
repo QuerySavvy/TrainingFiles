@@ -21,7 +21,7 @@ with page1:
         #Show the code
         code = '''page1, page2, page3 = st.tabs(["Page 1", "Page 2", "Page 3"])
 with page1:
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3, col4 = st.columns(4)
     with col1: #Add the buttons
         st.subheader("Layouts")
         tabsbutton = st.button("st.tabs") #-- add page tabs'''
@@ -112,25 +112,29 @@ ORDER BY salary DESC'''
     with col3: #Add the buttons
         st.subheader("User Input")
         textinput = st.button("Text Input")
-        multioption = st.button("Options")
+        clicks = st.button("Clicks")
         
     if textinput == True:
         st.text_input("Please enter a message", 
                       placeholder = "This is made with st.text_input")
-        st.selectbox("Please select an option",
+        options = st.selectbox("Please select an option",
                      ("Option 1", "Option 2", "Option 3"))
+        
+        multioptions = st.multiselect(
+        "What are your favorite colors",
+        ["Green", "Yellow", "Red", "Blue"])
+        
         st.divider()
         code = '''st.text_input("Please enter a message", 
               placeholder = "This is made with st.text_input")
-st.selectbox("Please select an option",
+options = st.selectbox("Please select an option",
              ("Option 1", "Option 2", "Option 3"))'''
         st.code(code, language='python')
 
-    if multioption == True:
-        st.text_input("Please enter a message", placeholder = "This is made with st.text_input")
-        st.selectbox(
-        "Please select an option",
-        ("Option 1", "Option 2", "Option 3"))
+
+
+    if clicks == True:
+        agree = st.checkbox("I agree")
 
 
 with page2:
