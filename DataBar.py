@@ -158,6 +158,10 @@ uploaded_files = st.file_uploader("Please upload a file")'''
         with st.spinner('loading...'):
             time.sleep(5)
             st.success('Done!')
+        code = '''with st.spinner('loading...'):
+    time.sleep(5)
+    st.success('Done!')'''
+        st.code(code, language='python')
             
     if warnings:
         st.divider()
@@ -165,6 +169,11 @@ uploaded_files = st.file_uploader("Please upload a file")'''
         st.info("st.info", icon="ℹ️")
         st.warning("st.warning",icon="☢️")
         st.error("st.error", icon="😱")
+        code = '''st.success("st.success", icon="🚀")
+st.info("st.info", icon="ℹ️")
+st.warning("st.warning",icon="☢️")
+st.error("st.error", icon="😱")'''
+        st.code(code, language='python')
     
 
 with page2:
