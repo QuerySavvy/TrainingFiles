@@ -16,8 +16,8 @@ if sidebarbutton == True:
     st.sidebar.write("Yipeeee")
     #Show the code
     code = '''sidebarbutton = st.button("Add sidebar")
-    if sidebarbutton == True:
-        st.sidebar.write("Yipeeee")'''
+if sidebarbutton == True:
+    st.sidebar.write("Yipeeee")'''
     st.code(code, language='python')
 
 #add a container bar
