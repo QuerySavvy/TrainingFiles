@@ -11,7 +11,7 @@ col1, col2, col3 = st.columns(3)
 code = '''#Page setup
 page1, page2, page3 = st.tabs(["Page 1", "Page 2", "Page 3"])
 col1, col2, col3 = st.columns(3)'''
-        st.code(code, language='python')
+st.code(code, language='python')
 
 
 with page1:
