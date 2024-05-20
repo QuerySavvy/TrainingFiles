@@ -173,7 +173,6 @@ st.warning("st.warning",icon="☢️")
 st.error("st.error", icon="😱")'''
         st.code(code, language='python')
     
-
 with page2:
     st.subheader("Intermediate Streamlit")
 
