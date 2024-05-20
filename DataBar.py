@@ -112,8 +112,15 @@ ORDER BY salary DESC'''
     with col3: #Add the buttons
         st.subheader("User Input")
         textinput = st.button("Text Input")
-        multioption = st.button("Multi Option")
+        multioption = st.button("Options")
         
+    if textinput == True:
+        st.text_input("Please enter a message", placeholder = "This is made with st.text_input")
+        st.selectbox("Please select an option",("Option 1", "Option 2", "Option 3"))
+        code = '''st.text_input("Please enter a message", placeholder = "This is made with st.text_input")
+        st.selectbox("Please select an option",("Option 1", "Option 2", "Option 3"))'''
+        st.code(code, language='python')
+
     if textinput == True:
         st.text_input("Please enter a message", placeholder = "This is made with st.text_input")
         st.selectbox(
