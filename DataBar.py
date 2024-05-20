@@ -78,5 +78,5 @@ with page1:
             st.write("col_3")'''
         st.code(code, language='python')
 
-with page1:
+with page2:
     st.write("Test")
