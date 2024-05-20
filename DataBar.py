@@ -15,11 +15,14 @@ st.code(code, language='python')
 
 
 with page1:
+    st.write("Test high p1")
     with col1: #Add the buttons
         st.subheader("layouts")
         sidebarbutton = st.button("st.sidebar") #-- add a side bar
         containerbutton = st.button("st.container") #-- add a container
         columnbutton = st.button("st.columns") #-- add columns
+    st.write("Test low p1")
 
 with page2:
-    st.write("Test")
+    st.write("Test high p2")
+    st.write("Test low p2")
