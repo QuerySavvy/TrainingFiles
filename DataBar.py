@@ -115,8 +115,10 @@ ORDER BY salary DESC'''
 
     if texttext == True:
         st.divider()
-        st.text("Merci - Nous avons reçu votre demande. Nous vous répondrons dans un délai de 12 mois (minimum).")
-        st.text("Cordialement, l'administration Française")
+        st.text("Merci - Nous avons reçu votre demande." 
+        st.text("Nous vous répondrons dans un délai de 12 mois (minimum).")
+        st.text("Cordialement"
+        st.text("L'administration Française")
         
     with col3: #Add the buttons
         st.subheader("User Interaction")
