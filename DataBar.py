@@ -4,7 +4,8 @@ import time
 
 st.title("Open Data Bar - Streamlit Demo")
 session_state = st.session_state
-session_state['header'] = None
+if "header" not session_state:
+    session_state['header'] = None
 session_state
 
 #Page setup
