@@ -173,14 +173,14 @@ st.error("st.error", icon="😱")'''
     
 with page2:
     st.write("Page2Selected")
-    st.write("placeholder")
-    st.write("placeholder")
+    st.write("Launched in 2019. Limited information available besides the official docs. ChatGPT-3.5 goes up to Jan 2022 so isnt very helpful.")
+    st.write("session state")
     st.write("placeholder")
     st.write("placeholder")
 
 with page3:
     st.write("Page3Selected")
-    st.write("placeholder")
+    st.write("Custom componants")
     st.write("placeholder")
     st.write("placeholder")
     st.write("placeholder")
