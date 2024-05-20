@@ -11,11 +11,12 @@ session_state
 #Page setup
 page1, page2, page3 = st.tabs(["Page 1", "Page 2", "Page 3"])
 
+if session_state['header'] == "page1":
+    st.header("This is dynamic text 😎")
+
 
 with page1:
     session_state['header'] = "page1"
-    if session_state['header'] == "page1":
-        st.header("This is dynamic text 😎")
     col1, col2, col3= st.columns(3)
     with col1: #Add the buttons
         st.subheader("Layouts")
@@ -178,8 +179,7 @@ st.error("st.error", icon="😱")'''
         st.code(code, language='python')
     
 with page2:
-    st.subheader("Intermediate Streamlit")
+    session_state['header'] = "page2"
 
 with page3:
-    st.subheader("Advanced Streamlit")
-    
+    session_state['header'] = "page3"
