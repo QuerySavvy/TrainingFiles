@@ -19,9 +19,11 @@ with page1:
 
     if tabsbutton == True:
         #Show the code
-        code = '''page1, page2, page3 = st.tabs(["Page 1", "Page 2", "Page 3"])
-with page1:
-    st.write("Hello World")'''
+        code = '''with page1:
+col1, col2, col3 = st.columns(3)
+with col1: #Add the buttons
+    st.subheader("Layouts")
+    tabsbutton = st.button("st.tabs") #-- add page tabs'''
         st.code(code, language='python')
     if sidebarbutton == True:
         st.sidebar.write("Yipeeee")
