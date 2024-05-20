@@ -119,6 +119,7 @@ ORDER BY salary DESC'''
                       placeholder = "This is made with st.text_input")
         st.selectbox("Please select an option",
                      ("Option 1", "Option 2", "Option 3"))
+        st.divider()
         code = '''st.text_input("Please enter a message", 
               placeholder = "This is made with st.text_input")
 st.selectbox("Please select an option",
