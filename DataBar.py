@@ -1,5 +1,5 @@
 import streamlit as st
-import time
+from time import sleep
 
 st.title("Open Data Bar - Streamlit Demo")
 st.subheader("Whats possible, limitations, and solutions")
