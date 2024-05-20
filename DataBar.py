@@ -164,6 +164,7 @@ uploaded_files = st.file_uploader("Please upload a file")'''
         st.success("st.success", icon="🚀")
         st.info("st.info", icon="ℹ️")
         st.warning("st.warning",icon="☢️")
+        st.error("st.error", icon="😱")
     
 
 with page2:
