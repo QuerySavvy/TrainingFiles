@@ -108,6 +108,14 @@ ORDER BY salary DESC'''
 
     if texttext == True:
         st.text("Merci - Nous avons bien reçu votre demande")
+        
+    with col3: #Add the buttons
+        st.subheader("User Input")
+        textinput = st.button("Text Input")
+        multioption = st.button("Multi Option")
+        
+    if textinput == True:
+        st.text_input("Please enter a message", value = "Awiting input")
 
 with page2:
     st.write("Test")
