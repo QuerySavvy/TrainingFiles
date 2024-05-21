@@ -15,10 +15,11 @@ def big_function_1(name):
 st.title("Open Data Bar - Streamlit Demo")
 session_state = st.session_state
 
+
 #Page setup
 page1, page2, page3 = st.tabs(["Page 1", "Page 2", "Page 3"])
 
-with page1: #------------------------------- Page 1   ------------------------------- Page 1   ------------------------------- Page 1   ------------------------------- Page 1   
+with page1:
     col1, col2, col3= st.columns(3)
     with col1: #Add the buttons
         st.subheader("Layouts")
@@ -183,7 +184,7 @@ st.warning("st.warning",icon="☢️")
 st.error("st.error", icon="😱")'''
         st.code(code, language='python')
     
-with page2: #------------------------------- Page 2 ------------------------------- Page 2 ------------------------------- Page 2 ------------------------------- Page 2    
+with page2:
 
 #Initialise my session states
     if 'disp_session_state' not in session_state:
@@ -231,14 +232,6 @@ with page2: #------------------------------- Page 2 ----------------------------
             session_state['order_taco_v1'] = False
             session_state['order_taco_v2'] = False
             session_state['order_taco_v3'] = False
-
-
-
-
-
-
-
-            
             col_1, col_2, col_3 = st.columns(3)
             with col_1:
                 size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
@@ -366,21 +359,6 @@ if session_state['make_taco_v3'] == True:
             session_state['order_taco_v2'] = False
             session_state['order_taco_v1'] = True
             session_state['order_taco_v3'] = False
-
-        if order_taco_2:
-            session_state['make_taco_v3'] = False
-            session_state['order_taco_v2'] = True
-            session_state['order_taco_v1'] = False
-            session_state['order_taco_v3'] = False
-
-        if order_taco_3:
-            session_state['make_taco_v3'] = False
-            session_state['order_taco_v2'] = False
-            session_state['order_taco_v1'] = False
-            session_state['order_taco_v3'] = True
-
-
-        
             
         if session_state['order_taco_v1'] == True:
             user = st.text_input("What is your name:")
@@ -433,7 +411,11 @@ if session_state['order_taco_v1'] == True:
             st.code(code, language='python')
 
 #-----Taco 5            
-
+        if order_taco_2:
+            session_state['make_taco_v3'] = False
+            session_state['order_taco_v2'] = True
+            session_state['order_taco_v1'] = False
+            session_state['order_taco_v3'] = False
             
         if session_state['order_taco_v2'] == True:
             user = st.text_input("What is your name:")
@@ -490,7 +472,11 @@ if session_state['order_taco_v1'] == True:
             st.code(code, language='python')
 
 #-----Taco 5
-
+        if order_taco_3:
+            session_state['make_taco_v3'] = False
+            session_state['order_taco_v2'] = False
+            session_state['order_taco_v1'] = False
+            session_state['order_taco_v3'] = True
             
         if session_state['order_taco_v3'] == True:
             user = st.text_input("What is your name:")
@@ -554,4 +540,3 @@ with page3:
     st.write("Custom componants")
     st.write("placeholder")
     st.write("placeholder")
-
