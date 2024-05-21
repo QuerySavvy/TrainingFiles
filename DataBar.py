@@ -240,9 +240,9 @@ https://docs.streamlit.io/library/advanced-features/session-state#initialization
 
     if taco3:
         if 'taco' not in session_state:
-            session_state['taco'] = 'True'
+            session_state['taco'] = True
             
-        if session_state['taco'] == 'True':
+        if session_state['taco'] == True:
             col_1, col_2, col_3 = st.columns(3)
             with col_1:
                 size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
