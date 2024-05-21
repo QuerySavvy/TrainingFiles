@@ -241,7 +241,7 @@ if taco:
                
         if taco2:
             session_state['taco'] = False
-            code = '''taco = st.button("Make a Taco")
+            code = '''taco2 = st.button("Make a Taco")
 if taco2:
     session_state['taco'] = True
     
