@@ -412,9 +412,10 @@ if session_state['order_taco_v1'] == True:
             
         if session_state['order_taco_v2'] == True:
             user = st.text_input("What is your name:")
-            if user:
+            if user is not None and session_state['user'] != user:
                 with st.spinner("Running big_function"):
                     big_function(user)
+                    session_state['user'] = user
                 col_1, col_2, col_3 = st.columns(3)
                 with col_1:
                     size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
