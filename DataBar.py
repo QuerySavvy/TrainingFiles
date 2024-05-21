@@ -349,7 +349,7 @@ if session_state['taco'] == True:
             taco4 = st.button("Order a taco v1")
         with col_2_:
             taco5 = st.button("Order a taco v2")
-        with col_3_
+        with col_3_:
             taco6 = st.button("Order a taco v3")
 #-----Taco 4        
         if taco4:
