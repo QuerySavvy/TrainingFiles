@@ -328,6 +328,7 @@ def big_function2(name):
     return user
     
     with st.container(border=True):
+        st.write("Another test")
         username = st.text_input("Enter your name")
         with st.spinner:
             big_function1(username)
