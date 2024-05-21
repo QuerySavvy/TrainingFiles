@@ -339,4 +339,8 @@ with page3:
     st.write("Custom componants")
     st.write("placeholder")
     st.write("placeholder")
-    st.write("placeholder")
+    with st.container(border=True):
+        st.write("Another test")
+        username = st.text_input("Enter your name")
+        with st.spinner:
+            big_function1(username)
