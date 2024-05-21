@@ -253,9 +253,9 @@ https://docs.streamlit.io/library/advanced-features/session-state#initialization
     if size and meat and sauce:
         with st.container(border = True):
             st.text("You have ordered:")
-            st.text(size + "Taco")
+            st.text(size + " Taco")
             st.text("With " + str(meat))
-            st.text("And" + str(sauce))
+            st.text("And " + str(sauce) + " Sauce")
 
     
     st.write("session state")
