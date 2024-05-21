@@ -183,7 +183,7 @@ with page2:
     st.write("Page2Selected")
     st.write("Launched in 2019. Limited information available besides the official docs. ChatGPT-3.5 goes up to Jan 2022 so isnt very helpful.")
 
-    col1_top, col2_top = st.columns(2)
+    col1_top, col2_top = st.columns([0.8,0.2])
     with col1_top:
         st.header("Execution limitations")
     with col2_top:
