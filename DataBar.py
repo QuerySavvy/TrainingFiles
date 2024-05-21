@@ -1,6 +1,7 @@
 import streamlit as st
 import time
 
+@st.cache_data
 def big_function(name):
     welcome = ("🌮 Hi " + name + ". Welcome to Hardis Tacos! 🌮")
     time.sleep(5)
