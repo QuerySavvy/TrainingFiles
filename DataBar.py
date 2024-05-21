@@ -2,7 +2,7 @@ import streamlit as st
 import time
 
 def big_function(name):
-    welcome = ("Welcome " + name)
+    welcome = ("Hi " + name + "Welcome to Hardis Tacos!")
     time.sleep(3)
     st.write(welcome)
 
@@ -185,6 +185,8 @@ with page2:
         session_state['disp_session_state'] = False
     if 'taco' not in session_state:
         session_state['taco'] = None
+    if 'taco2' not in session_state:
+        session_state['taco2'] = None
     
     st.write("Page2Selected")
     st.write("Launched in 2019. Limited information available besides the official docs. ChatGPT-3.5 goes up to Jan 2022 so isnt very helpful.")
@@ -323,12 +325,15 @@ if session_state['taco'] == True:
 #-------------------------------------------------------------------------------- Big function 
     st.write("Page2Selected - outside the container")
     with st.container(border=True):
-        user = st.text_input("What is your name")
-        if user:
-            with st.spinner("Running big_function1"):
-                big_function(user)
+        taco4 = st.button("Order a taco v1")
+        if taco4:
+            session_state['taco_2'] = True
+        if session_state['taco_2'] = True:
+            user = st.text_input("What is your name")
+            if user:
+                with st.spinner("Running big_function1"):
+                    big_function(user)
  
-        st.write("Page2Selected - inside the container")
 
 
 with page3:
