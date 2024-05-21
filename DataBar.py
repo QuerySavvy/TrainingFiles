@@ -1,6 +1,8 @@
 import streamlit as st
 import time
 
+def big_function(name):
+    st.write("Welcome " + name)
 
 st.title("Open Data Bar - Streamlit Demo")
 session_state = st.session_state
