@@ -324,7 +324,8 @@ if session_state['taco'] == True:
     st.write("Page2Selected - outside the container")
     with st.container(border=True):
         user = st.text_input("What is your name")
-        big_function(user)
+        if user:
+            big_function(user)
  
         st.write("Page2Selected - inside the container")
 
