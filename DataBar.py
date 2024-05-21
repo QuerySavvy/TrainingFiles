@@ -175,11 +175,26 @@ st.error("st.error", icon="😱")'''
         st.code(code, language='python')
     
 with page2:
+
+    #Initialise my session states
+    if 'disp_session_state' not in session_state:
+    session_state['disp_session_state'] = False  
+    
     st.write("Page2Selected")
     st.write("Launched in 2019. Limited information available besides the official docs. ChatGPT-3.5 goes up to Jan 2022 so isnt very helpful.")
-    st.header("Execution limitations")
-    
+
+    col1_top, col2_top = st.columnns(2)
+    with col1_top:
+        st.header("Execution limitations")
+    with col2_top:
+        disp_session_state = st.toggle("Display session state")
+        if disp_session_state:
+            session_state['disp_session_state'] = True
+    if session_state['disp_session_state'] == True:
+        session_state
+
     with st.container(border=True):
+        
 #-------- Taco v1
         col_1, col_2, col_3 = st.columns(3)
         with col_1:
