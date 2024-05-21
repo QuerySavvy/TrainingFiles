@@ -283,7 +283,9 @@ https://docs.streamlit.io/library/advanced-features/session-state#initialization
                 st.text("With " + str(meat))
                 st.text("And " + str(sauce) + " Sauce")
                 st.divider()
-            code ='''if taco3:
+            code ='''taco3 = st.button("Make a Taco")
+            
+if taco3:
     session_state['taco'] = True
         
 if session_state['taco'] == True:
