@@ -195,6 +195,8 @@ with page2:
         session_state['order_taco_v1'] = None
     if 'order_taco_v2' not in session_state:
         session_state['order_taco_v2'] = None
+    if 'order_taco_v3' not in session_state:
+        session_state['order_taco_v3'] = None
     if 'user' not in session_state:
         session_state['user'] = None
         
@@ -229,6 +231,7 @@ with page2:
             session_state['make_taco_v3'] = False
             session_state['order_taco_v1'] = False
             session_state['order_taco_v2'] = False
+            session_state['order_taco_v3'] = False
             col_1, col_2, col_3 = st.columns(3)
             with col_1:
                 size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
@@ -266,6 +269,7 @@ if make_taco_1:
             session_state['make_taco_v3'] = False
             session_state['order_taco_v1'] = False
             session_state['order_taco_v2'] = False
+            session_state['order_taco_v3'] = False
             code = '''taco2 = st.button("Make a Taco")
 if make_taco_2:
     session_state['make_taco_2'] = True
@@ -298,6 +302,7 @@ https://docs.streamlit.io/library/advanced-features/session-state#initialization
             session_state['order_taco_v1'] = False
             session_state['order_taco_v2'] = False
             session_state['make_taco_v3'] = True
+            session_state['order_taco_v3'] = False
                 
         if session_state['make_taco_v3'] == True:
             col_1, col_2, col_3 = st.columns(3)
@@ -353,6 +358,7 @@ if session_state['make_taco_v3'] == True:
             session_state['make_taco_v3'] = False
             session_state['order_taco_v2'] = False
             session_state['order_taco_v1'] = True
+            session_state['order_taco_v3'] = False
             
         if session_state['order_taco_v1'] == True:
             user = st.text_input("What is your name:")
@@ -409,6 +415,7 @@ if session_state['order_taco_v1'] == True:
             session_state['make_taco_v3'] = False
             session_state['order_taco_v2'] = True
             session_state['order_taco_v1'] = False
+            session_state['order_taco_v3'] = False
             
         if session_state['order_taco_v2'] == True:
             user = st.text_input("What is your name:")
@@ -445,10 +452,10 @@ if session_state['order_taco_v1'] == True:
         if session_state['order_taco_v2'] == True:
             user = st.text_input("What is your name:")
             if user:
-                if session_state['user'] != user: # <--------- 1
+                if session_state['user'] != user: 
                     with st.spinner("Running big_function"): 
                         big_function(user)  
-                        session_state['user'] = user # <--------- 2
+                        session_state['user'] = user 
                 col_1, col_2, col_3 = st.columns(3)
                 with col_1:
                     size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
@@ -465,7 +472,32 @@ if session_state['order_taco_v1'] == True:
             st.code(code, language='python')
 
 #-----Taco 5
-
+        if order_taco_3:
+            session_state['make_taco_v3'] = False
+            session_state['order_taco_v2'] = False
+            session_state['order_taco_v1'] = False
+            session_state['order_taco_v3'] = True
+            
+        if session_state['order_taco_v1'] == True:
+            user = st.text_input("What is your name:")
+            if user:
+                with st.spinner("Running big_function"):
+                    big_function_1(user)
+                col_1, col_2, col_3 = st.columns(3)
+                with col_1:
+                    size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
+                with col_2:
+                    meat = st.multiselect("Choose the meat",["Poulet panné", "Cordon bleu", "kebab"])
+                with col_3:
+                    sauce = st.multiselect("Choose the sauce",["Allondoise", "Algerienne", "Blanche"])
+                    
+                if size and meat and sauce:
+                    st.divider()
+                    st.text("You have ordered:")
+                    st.text(size + " Taco")
+                    st.text("With " + str(meat))
+                    st.text("And " + str(sauce) + " Sauce")
+                    st.divider()
 
 
     
