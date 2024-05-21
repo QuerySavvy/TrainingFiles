@@ -480,7 +480,7 @@ if session_state['order_taco_v2'] == True:
             session_state['order_taco_v1'] = False
             session_state['order_taco_v2'] = False
             session_state['order_taco_v3'] = True
-            #st.rerun()
+            #st.rerun() #To be used in a live example
             
         if session_state['order_taco_v3'] == True:
             user = st.text_input("What is your name:")
