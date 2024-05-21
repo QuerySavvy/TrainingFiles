@@ -206,21 +206,29 @@ if taco:
             st.code(code, language='python')
     
     with st.container(border=True):    
-        taco = st.button("Make a Taco v2")
+        taco = st.button("Make a Taco v2")       
         if taco:
-            session_state['taco'] = True
-            
-        if session_state['taco'] == True:
-            col_1, col_2, col_3 = st.columns(3)
-            with col_1:
-                size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
-            with col_2:
-                meat = st.multiselect("Choose the meat",["Poulet panné", "Cordon bleu", "kebab"])
-            with col_3:
-                sauce = st.multiselect("Choose the sauce",["Allondoise", "Algerienne", "Blanche"])
-                
-            if size and meat and sauce:
-                st.write("Order:" + size + meat + " with" + sauce + "sauce")
+            code = '''taco = st.button("Make a Taco")
+if taco:
+    session_state['taco'] = True
+if session_state['taco'] == True:
+    col_1, col_2, col_3 = st.columns(3)
+    with col_1:
+        size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
+    with col_2:
+        meat = st.multiselect("Choose the meat",["Poulet panné", "Cordon bleu", "kebab"])
+    with col_3:
+        sauce = st.multiselect("Choose the sauce",["Allondoise", "Algerienne", "Blanche"])
+        
+    if size and meat and sauce:
+        st.write("Order:" + size + meat + " with" + sauce + "sauce")'''
+            st.code(code, language='python')
+            st.error('''KeyError: 'st.session_state has no key "taco". Did you forget to initialize it? 
+
+More info: 
+
+https://docs.streamlit.io/library/advanced-features/session-state#initialization''')
+
     
     st.write("session state")
     st.write("placeholder")
