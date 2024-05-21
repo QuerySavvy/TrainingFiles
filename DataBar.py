@@ -197,9 +197,9 @@ with page2:
     if session_state['disp_session_state'] == True:
         session_state
 
+
+#-------------------------------------------------------------------------------- Taco Header
     with st.container(border=True):
-        
-#-------- Taco Header
         col_1, col_2, col_3 = st.columns(3)
         with col_1:
             taco1 = st.button("Make a Taco v1")
@@ -315,13 +315,22 @@ if session_state['taco'] == True:
         st.text("And " + str(sauce) + " Sauce")
         st.divider()'''
             st.code(code, language='python')
+
+#-------------------------------------------------------------------------------- Big function 
+def big_function1(name):
+    time.sleep(3)
+    user = "Hi " + str(name) + ", Welcome to Hardis Tacos!" str(name)
+    st.text(user)
+
+def big_function2(name):
+    time.sleep(3)
+    user = "Hi " + str(name) + ", Welcome to Hardis Tacos!" str(name)
+    return user
     
-    st.write("session state")
-    st.write("placeholder")
-    st.write("placeholder")
-    if st.button("BigFunction"):
-        with st.spinner('loading...'):
-            time.sleep(3)
+    with st.container(border=True):
+        username = st.text_input("Enter your name")
+        with st.spinner:
+            big_function1(username)
 
 
 with page3:
