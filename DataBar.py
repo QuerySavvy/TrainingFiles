@@ -265,7 +265,7 @@ https://docs.streamlit.io/library/advanced-features/session-state#initialization
     if st.button("BigFunction"):
         with st.spinner('loading...'):
             time.sleep(3)
-
+    session_state
 with page3:
     st.write("Page3Selected")
     st.write("Custom componants")
