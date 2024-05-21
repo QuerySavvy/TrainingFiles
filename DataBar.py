@@ -1,14 +1,17 @@
 import streamlit as st
 import time
 
-@st.cache_data
 def big_function(name):
     welcome = ("🌮 Hi " + name + ". Welcome to Hardis Tacos! 🌮")
     time.sleep(5)
     st.write(welcome)
 
-@st.cache_data
 def big_function_1(name):
+    welcome = ("🌮 Hi " + name + ". Welcome to Hardis Tacos! 🌮")
+    time.sleep(5)
+    st.write(welcome)
+
+def big_function_2(name):
     welcome = ("🌮 Hi " + name + ". Welcome to Hardis Tacos! 🌮")
     time.sleep(5)
     st.write(welcome)
@@ -341,7 +344,14 @@ if session_state['taco'] == True:
 
 #-------------------------------------------------------------------------------- Big function 
     with st.container(border=True):
-        taco4 = st.button("Order a taco v1")
+        col_1_, col_2_, col_3_ = st.columns(3)
+        with col_1_:
+            taco4 = st.button("Order a taco v1")
+        with col_2_:
+            taco5 = st.button("Order a taco v2")
+        with col_3_
+            taco6 = st.button("Order a taco v3")
+#-----Taco 4        
         if taco4:
             session_state['taco_2'] = True
             session_state['taco'] = False
@@ -391,7 +401,7 @@ if session_state['taco_2'] == True:
             st.divider()'''
             st.code(code, language='python')
 
-        taco5 = st.button("Order a taco v2")
+#-----Taco 5            
         if taco5:
             session_state['taco_3'] = True
             session_state['taco_2'] = False
@@ -444,6 +454,11 @@ if session_state['taco_2'] == True:
             st.text("And " + str(sauce) + " Sauce")
             st.divider()'''
             st.code(code, language='python')
+
+#-----Taco 5
+
+
+
     
     if session_state['disp_session_state'] == True:
         st.sidebar.header("Session State Info")
