@@ -299,9 +299,9 @@ https://docs.streamlit.io/library/advanced-features/session-state#initialization
 #-------- Taco v3
         
         if make_taco_3:
-            session_state['make_taco_v3'] = True
             session_state['order_taco_v1'] = False
             session_state['order_taco_v2'] = False
+            session_state['make_taco_v3'] = True
                 
         if session_state['make_taco_v3'] == True:
             col_1, col_2, col_3 = st.columns(3)
@@ -355,8 +355,8 @@ if session_state['make_taco_v3'] == True:
 #-----Taco 4        
         if order_taco_1:
             session_state['make_taco_v3'] = False
-            session_state['order_taco_v1'] = True
             session_state['order_taco_v2'] = False
+            session_state['order_taco_v1'] = True
             
         if session_state['order_taco_v1'] == True:
             user = st.text_input("What is your name")
@@ -407,9 +407,9 @@ if session_state['order_taco_v1'] == True:
 
 #-----Taco 5            
         if order_taco_2:
-            session_state['order_taco_v2'] = True
             session_state['order_taco_v1'] = False
             session_state['make_taco_v3'] = False
+            session_state['order_taco_v2'] = True
             
         if session_state['order_taco_v2'] == True:
             user = st.text_input("What is your name")
