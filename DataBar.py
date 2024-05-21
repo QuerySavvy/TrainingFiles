@@ -2,8 +2,8 @@ import streamlit as st
 import time
 
 def big_function(name):
-    welcome = ("Hi " + name + " Welcome to Hardis Tacos!")
-    time.sleep(3)
+    welcome = ("🌮 Hi " + name + ". Welcome to Hardis Tacos! 🌮")
+    time.sleep(5)
     st.write(welcome)
 
 st.title("Open Data Bar - Streamlit Demo")
