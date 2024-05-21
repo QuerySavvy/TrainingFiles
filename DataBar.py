@@ -2,7 +2,9 @@ import streamlit as st
 import time
 
 def big_function(name):
-    st.write("Welcome " + name)
+    welcome = ("Welcome " + name)
+    time.sleep(3)
+    st.write(welcome)
 
 st.title("Open Data Bar - Streamlit Demo")
 session_state = st.session_state
@@ -322,7 +324,9 @@ if session_state['taco'] == True:
     st.write("Page2Selected - outside the container")
     with st.container(border=True):
         user = st.text_input("What is your name")
-        st.write(user)
+        if user not None:
+            big_function(user)
+ 
         st.write("Page2Selected - inside the container")
 
 
