@@ -178,9 +178,15 @@ with page2:
     st.write("Page2Selected")
     st.write("Launched in 2019. Limited information available besides the official docs. ChatGPT-3.5 goes up to Jan 2022 so isnt very helpful.")
     st.header("Execution limitations")
+    
     with st.container(border=True):
-        taco = st.button("Make a Taco v1")
-        if taco:
+#-------- Taco v1
+        col_1, col_2, col_3 = st.columns(3)
+        with col_1:
+            taco1 = st.button("Make a Taco v1")
+        with col_2:
+            taco2 = st.button("Make a Taco v2")
+        if taco1:
             col_1, col_2, col_3 = st.columns(3)
             with col_1:
                 size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
@@ -204,10 +210,10 @@ if taco:
     if size and meat and sauce:
         st.write("Order:" + size + meat + "with" + sauce + "sauce")'''
             st.code(code, language='python')
-    
-    with st.container(border=True):    
-        taco = st.button("Make a Taco v2")       
-        if taco:
+
+#-------- Taco v2
+               
+        if taco2:
             code = '''taco = st.button("Make a Taco")
 if taco:
     session_state['taco'] = True
