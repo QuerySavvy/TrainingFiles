@@ -200,17 +200,16 @@ with page2:
     with st.container(border=True):
         
 #-------- Taco Header
-        col_1, col_2, col_3, col_4 = st.columns(4)
+        col_1, col_2, col_3 = st.columns()
         with col_1:
             taco1 = st.button("Make a Taco v1")
         with col_2:
             taco2 = st.button("Make a Taco v2")
         with col_3:
             taco3 = st.button("Make a Taco v3")
-        with col_4:
-            taco4 = st.button("Make a Taco v4")
 
 #-------- Taco V1
+        
         if taco1:
             session_state['taco'] = False
             col_1, col_2, col_3 = st.columns(3)
@@ -267,6 +266,8 @@ More info:
 
 https://docs.streamlit.io/library/advanced-features/session-state#initialization''')
 
+#-------- Taco v3
+        
         if taco3:
             session_state['taco'] = True
                 
@@ -286,10 +287,13 @@ https://docs.streamlit.io/library/advanced-features/session-state#initialization
                 st.text("With " + str(meat))
                 st.text("And " + str(sauce) + " Sauce")
                 st.divider()
-            code ='''taco3 = st.button("Make a Taco")
+            code ='''#Initialise my session states
+if 'taco' not in session_state:
+    session_state['taco'] = None
+    
+    taco3 = st.button("Make a Taco")
 if taco3:
-    if 'taco' not in session_state:
-        session_state['taco'] = True
+    session_state['taco'] = True
         
 if session_state['taco'] == True:
     col_1, col_2, col_3 = st.columns(3)
