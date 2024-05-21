@@ -233,7 +233,10 @@ if taco:
     with col_3:
         sauce = st.multiselect("Choose the sauce",["Allondoise", "Algerienne", "Blanche"])
     if size and meat and sauce:
-        st.write("Order:" + size + meat + "with" + sauce + "sauce")'''
+        st.text("You have ordered:")
+        st.text(size + " Taco")
+        st.text("With " + str(meat))
+        st.text("And " + str(sauce) + " Sauce")'''
             st.code(code, language='python')
 
 #-------- Taco v2
