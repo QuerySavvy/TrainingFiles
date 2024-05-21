@@ -318,6 +318,8 @@ if session_state['taco'] == True:
 
 #-------------------------------------------------------------------------------- Big function 
     st.write("Page2Selected")
+    with st.container(border=True):
+        st.write("Page2Selected")
 
 
 with page3:
