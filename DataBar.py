@@ -251,11 +251,12 @@ https://docs.streamlit.io/library/advanced-features/session-state#initialization
         sauce = st.multiselect("Choose the sauce",["Allondoise", "Algerienne", "Blanche"])
         
     if size and meat and sauce:
-        with st.container(border = True):
-            st.text("You have ordered:")
-            st.text(size + " Taco")
-            st.text("With " + str(meat))
-            st.text("And " + str(sauce) + " Sauce")
+        st.divider()
+        st.text("You have ordered:")
+        st.text(size + " Taco")
+        st.text("With " + str(meat))
+        st.text("And " + str(sauce) + " Sauce")
+        st.divider()
 
     
     st.write("session state")
