@@ -190,6 +190,8 @@ with page2:
         disp_session_state = st.toggle("Display session state")
         if disp_session_state:
             session_state['disp_session_state'] = True
+        else:
+            session_state['disp_session_state'] = False
     if session_state['disp_session_state'] == True:
         session_state
 
