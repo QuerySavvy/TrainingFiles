@@ -6,7 +6,7 @@ def big_function(name):
     time.sleep(5)
     st.write(welcome)
 
-@st.cache
+@st.cache_data
 def big_function_1(name):
     welcome = ("🌮 Hi " + name + ". Welcome to Hardis Tacos! 🌮")
     time.sleep(5)
@@ -502,7 +502,7 @@ if session_state['order_taco_v2'] == True:
                     st.text("With " + str(meat))
                     st.text("And " + str(sauce) + " Sauce")
                     st.divider()
-            code ='''@st.cache
+            code ='''@st.cache_data
 def big_function_1(name):
 welcome = ("🌮 Hi " + name + ". Welcome to Hardis Tacos! 🌮")
 time.sleep(5)
