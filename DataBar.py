@@ -317,14 +317,12 @@ if session_state['taco'] == True:
             st.code(code, language='python')
 
 #-------------------------------------------------------------------------------- Big function 
-    st.write("Page2Selected")
+    st.write("Page2Selected - outside the container")
 def big_function(name):
     st.write("Welcome " + name)
     
     with st.container(border=True):
-        user = st.text_input("What is your name ?")
-        big_function(name)
-        st.write("Page2Selected")
+        st.write("Page2Selected - inside the container")
 
 
 with page3:
