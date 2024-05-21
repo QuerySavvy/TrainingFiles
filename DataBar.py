@@ -360,7 +360,7 @@ if session_state['make_taco_v3'] == True:
             session_state['order_taco_v1'] = True
             
         if session_state['order_taco_v1'] == True:
-            user = st.text_input("What is your name",key="order1")
+            user = st.text_input("What is your name",value="",key="order1")
             if user:
                 with st.spinner("Running big_function"):
                     big_function(user)
@@ -416,7 +416,7 @@ if session_state['order_taco_v1'] == True:
             session_state['order_taco_v2'] = True
             
         if session_state['order_taco_v2'] == True:
-            user = st.text_input("What is your name",key="order2")
+            user = st.text_input("What is your name",value="",key="order2")
             if user:
                 if session_state['user'] != user:
                     with st.spinner("Running big_function_1"):
