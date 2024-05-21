@@ -6,6 +6,7 @@ def big_function(name):
     time.sleep(5)
     st.write(welcome)
 
+@st.cache
 def big_function_1(name):
     welcome = ("🌮 Hi " + name + ". Welcome to Hardis Tacos! 🌮")
     time.sleep(5)
@@ -378,13 +379,18 @@ if session_state['make_taco_v3'] == True:
                     st.text("With " + str(meat))
                     st.text("And " + str(sauce) + " Sauce")
                     st.divider()
-            code ='''if order_taco_1:
+            code ='''def big_function(name):
+    welcome = ("🌮 Hi " + name + ". Welcome to Hardis Tacos! 🌮")
+    time.sleep(5)
+    st.write(welcome)
+
+if order_taco_1:
     session_state['make_taco_v3'] = False
-    session_state['order_taco_v1'] = True
     session_state['order_taco_v2'] = False
+    session_state['order_taco_v1'] = True
     
 if session_state['order_taco_v1'] == True:
-    user = st.text_input("What is your name")
+    user = st.text_input("What is your name",key="order1")
     if user:
         with st.spinner("Running big_function"):
             big_function(user)
@@ -397,12 +403,10 @@ if session_state['order_taco_v1'] == True:
             sauce = st.multiselect("Choose the sauce",["Allondoise", "Algerienne", "Blanche"])
             
         if size and meat and sauce:
-            st.divider()
             st.text("You have ordered:")
             st.text(size + " Taco")
             st.text("With " + str(meat))
-            st.text("And " + str(sauce) + " Sauce")
-            st.divider()'''
+            st.text("And " + str(sauce) + " Sauce")'''
             st.code(code, language='python')
 
 #-----Taco 5            
