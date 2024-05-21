@@ -218,6 +218,7 @@ with page2:
         
         if taco1:
             session_state['taco'] = False
+            session_state['taco_2'] = False
             col_1, col_2, col_3 = st.columns(3)
             with col_1:
                 size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
@@ -253,6 +254,7 @@ if taco:
                
         if taco2:
             session_state['taco'] = False
+            session_state['taco_2'] = False
             code = '''taco2 = st.button("Make a Taco")
 if taco2:
     session_state['taco'] = True
@@ -283,6 +285,7 @@ https://docs.streamlit.io/library/advanced-features/session-state#initialization
         
         if taco3:
             session_state['taco'] = True
+            session_state['taco_2'] = False
                 
         if session_state['taco'] == True:
             col_1, col_2, col_3 = st.columns(3)
