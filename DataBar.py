@@ -251,9 +251,9 @@ https://docs.streamlit.io/library/advanced-features/session-state#initialization
         sauce = st.multiselect("Choose the sauce",["Allondoise", "Algerienne", "Blanche"])
         
     if size and meat and sauce:
-        st.write(size)
-        st.write(str(meat))
-        st.write(str(sauce))
+        st.text(size)
+        st.text(str(meat))
+        st.text(str(sauce))
 
     
     st.write("session state")
