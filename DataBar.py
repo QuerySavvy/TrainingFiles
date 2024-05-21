@@ -319,7 +319,7 @@ if session_state['taco'] == True:
 #-------------------------------------------------------------------------------- Big function 
 def big_function1(name):
     time.sleep(3)
-    user = "Hi " + str(name) + ", Welcome to Hardis Tacos!" str(name)
+    user = "Hi " + str(name) + ", Welcome to Hardis Tacos!" + str(name)
     st.text(user)
 
 def big_function2(name):
