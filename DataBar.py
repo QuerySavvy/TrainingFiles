@@ -200,8 +200,7 @@ with page2:
     if 'user' not in session_state:
         session_state['user'] = None
         
-    st.write("Page2Selected")
-    st.write("Launched in 2019. Limited information available besides the official docs. ChatGPT-3.5 goes up to Jan 2022 so isnt very helpful.")
+    st.write("Launched in 2019. \n\n Limited information available besides the official docs. \n\n ChatGPT-3.5 goes up to Jan 2022 so isnt very helpful.")
 
     col1_top, col2_top = st.columns([0.7,0.3])
     with col1_top:
