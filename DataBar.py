@@ -200,8 +200,7 @@ with page2:
             session_state['disp_session_state'] = True
         else:
             session_state['disp_session_state'] = False
-    if session_state['disp_session_state'] == True:
-        session_state
+
 
 
 #-------------------------------------------------------------------------------- Taco Header
@@ -356,7 +355,8 @@ if session_state['taco'] == True:
                     st.text("With " + str(meat))
                     st.text("And " + str(sauce) + " Sauce")
                     st.divider()
-
+    if session_state['disp_session_state'] == True:
+        st.sidebar(session_state)
 
 with page3:
     st.write("Page3Selected")
