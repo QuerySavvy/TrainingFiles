@@ -447,32 +447,32 @@ welcome = ("🌮 Hi " + name + ". Welcome to Hardis Tacos! 🌮")
 time.sleep(5)
 st.write(welcome)
 
-    if order_taco_2:
-        session_state['make_taco_v3'] = False
-        session_state['order_taco_v1'] = False
-        session_state['order_taco_v2'] = True
-        session_state['order_taco_v3'] = False
-        
-    if session_state['order_taco_v2'] == True:
-        user = st.text_input("What is your name:")
-        if user:
-            if session_state['user'] != user: 
-                with st.spinner("Running big_function"): 
-                    big_function(user)  
-                    session_state['user'] = user 
-            col_1, col_2, col_3 = st.columns(3)
-            with col_1:
-                size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
-            with col_2:
-                meat = st.multiselect("Choose the meat",["Poulet panné", "Cordon bleu", "kebab"])
-            with col_3:
-                sauce = st.multiselect("Choose the sauce",["Allondoise", "Algerienne", "Blanche"])
-                
-            if size and meat and sauce:
-                st.text("You have ordered:")
-                st.text(size + " Taco")
-                st.text("With " + str(meat))
-                st.text("And " + str(sauce) + " Sauce")'''
+if order_taco_2:
+    session_state['make_taco_v3'] = False
+    session_state['order_taco_v1'] = False
+    session_state['order_taco_v2'] = True
+    session_state['order_taco_v3'] = False
+    
+if session_state['order_taco_v2'] == True:
+    user = st.text_input("What is your name:")
+    if user:
+        if session_state['user'] != user: 
+            with st.spinner("Running big_function"): 
+                big_function(user)  
+                session_state['user'] = user 
+        col_1, col_2, col_3 = st.columns(3)
+        with col_1:
+            size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
+        with col_2:
+            meat = st.multiselect("Choose the meat",["Poulet panné", "Cordon bleu", "kebab"])
+        with col_3:
+            sauce = st.multiselect("Choose the sauce",["Allondoise", "Algerienne", "Blanche"])
+            
+        if size and meat and sauce:
+            st.text("You have ordered:")
+            st.text(size + " Taco")
+            st.text("With " + str(meat))
+            st.text("And " + str(sauce) + " Sauce")'''
             st.code(code, language='python')
 
 #-----Taco 5
@@ -509,32 +509,32 @@ welcome = ("🌮 Hi " + name + ". Welcome to Hardis Tacos! 🌮")
 time.sleep(5)
 st.write(welcome)
 
-    if order_taco_3:
-        session_state['make_taco_v3'] = False
-        session_state['order_taco_v1'] = False
-        session_state['order_taco_v2'] = False
-        session_state['order_taco_v3'] = True
-        
-    if session_state['order_taco_v3'] == True:
-        user = st.text_input("What is your name:")
-        if user:
-            if session_state['user'] != user: 
-                with st.spinner("Running big_function_1"): 
-                    big_function(user)  
-                    session_state['user'] = user 
-            col_1, col_2, col_3 = st.columns(3)
-            with col_1:
-                size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
-            with col_2:
-                meat = st.multiselect("Choose the meat",["Poulet panné", "Cordon bleu", "kebab"])
-            with col_3:
-                sauce = st.multiselect("Choose the sauce",["Allondoise", "Algerienne", "Blanche"])
-                
-            if size and meat and sauce:
-                st.text("You have ordered:")
-                st.text(size + " Taco")
-                st.text("With " + str(meat))
-                st.text("And " + str(sauce) + " Sauce")'''
+if order_taco_3:
+    session_state['make_taco_v3'] = False
+    session_state['order_taco_v1'] = False
+    session_state['order_taco_v2'] = False
+    session_state['order_taco_v3'] = True
+    
+if session_state['order_taco_v3'] == True:
+    user = st.text_input("What is your name:")
+    if user:
+        if session_state['user'] != user: 
+            with st.spinner("Running big_function_1"): 
+                big_function_1(user)  
+                session_state['user'] = user 
+        col_1, col_2, col_3 = st.columns(3)
+        with col_1:
+            size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
+        with col_2:
+            meat = st.multiselect("Choose the meat",["Poulet panné", "Cordon bleu", "kebab"])
+        with col_3:
+            sauce = st.multiselect("Choose the sauce",["Allondoise", "Algerienne", "Blanche"])
+            
+        if size and meat and sauce:
+            st.text("You have ordered:")
+            st.text(size + " Taco")
+            st.text("With " + str(meat))
+            st.text("And " + str(sauce) + " Sauce")'''
             st.code(code, language='python')
 
     
