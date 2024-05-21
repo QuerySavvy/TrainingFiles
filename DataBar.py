@@ -200,7 +200,7 @@ with page2:
     with st.container(border=True):
         
 #-------- Taco Header
-        col_1, col_2, col_3 = st.columns()
+        col_1, col_2, col_3 = st.columns(3)
         with col_1:
             taco1 = st.button("Make a Taco v1")
         with col_2:
