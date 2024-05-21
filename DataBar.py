@@ -185,8 +185,8 @@ with page2:
         session_state['disp_session_state'] = False
     if 'taco' not in session_state:
         session_state['taco'] = None
-    if 'taco2' not in session_state:
-        session_state['taco2'] = None
+    if 'taco_2' not in session_state:
+        session_state['taco_2'] = None
     
     st.write("Page2Selected")
     st.write("Launched in 2019. Limited information available besides the official docs. ChatGPT-3.5 goes up to Jan 2022 so isnt very helpful.")
