@@ -545,10 +545,11 @@ if session_state['order_taco_v3'] == True:
 with page3:
     st.write("Custom componants")
 
-    code = st.text_area("enter some python code here",height = 200)
+    code = st.text_area("Enter your python code here",height = 100)
     if st.button("Run Code"):
         try:
-            exec(code)
+            with st.container(border = true):
+                exec(code)
         except Exception as e:
             st.error(f"Error: {e}")
     
