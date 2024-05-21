@@ -252,8 +252,8 @@ https://docs.streamlit.io/library/advanced-features/session-state#initialization
         
     if size and meat and sauce:
         st.write(size)
-        st.write(meat)
-        st.write(sauce)
+        st.write(str(meat))
+        st.write(str(sauce))
 
     
     st.write("session state")
