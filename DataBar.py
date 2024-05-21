@@ -233,6 +233,9 @@ https://docs.streamlit.io/library/advanced-features/session-state#initialization
     st.write("session state")
     st.write("placeholder")
     st.write("placeholder")
+    if st.button("BigFunction"):
+        with st.spinner('loading...'):
+            time.sleep(3)
 
 with page3:
     st.write("Page3Selected")
