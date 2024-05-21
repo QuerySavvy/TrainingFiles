@@ -228,10 +228,10 @@ with page2:
                 
             if size and meat and sauce:
                 if size and meat and sauce:
-                st.text("You have ordered:")
-                st.text(size + " Taco")
-                st.text("With " + str(meat))
-                st.text("And " + str(sauce) + " Sauce")
+                    st.text("You have ordered:")
+                    st.text(size + " Taco")
+                    st.text("With " + str(meat))
+                    st.text("And " + str(sauce) + " Sauce")
 
             code = '''taco = st.button("Make a Taco")
 if taco:
