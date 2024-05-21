@@ -409,7 +409,7 @@ if session_state['order_taco_v1'] == True:
         if order_taco_2:
             session_state['order_taco_v1'] = False
             session_state['make_taco_v3'] = False
-            session_state['order_taco_v2'] = False
+            session_state['order_taco_v2'] = True
             
         if session_state['order_taco_v2'] == True:
             user = st.text_input("What is your name")
