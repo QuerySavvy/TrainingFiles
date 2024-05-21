@@ -356,6 +356,7 @@ if session_state['taco'] == True:
                     st.text("And " + str(sauce) + " Sauce")
                     st.divider()
     if session_state['disp_session_state'] == True:
+        st.sidebar.header("Session State Info")
         st.sidebar.write(session_state)
 
 with page3:
