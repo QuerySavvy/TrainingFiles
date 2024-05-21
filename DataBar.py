@@ -317,21 +317,7 @@ if session_state['taco'] == True:
             st.code(code, language='python')
 
 #-------------------------------------------------------------------------------- Big function 
-def big_function1(name):
-    time.sleep(3)
-    user = "Hi " + str(name) + ", Welcome to Hardis Tacos!" + str(name)
-    st.text(user)
-
-def big_function2(name):
-    time.sleep(3)
-    user = "Hi " + str(name) + ", Welcome to Hardis Tacos!" + str(name)
-    return user
-    
-    with st.container(border=True):
-        st.write("Another test")
-        username = st.text_input("Enter your name")
-        with st.spinner:
-            big_function1(username)
+    st.write("Page2Selected")
 
 
 with page3:
@@ -339,8 +325,4 @@ with page3:
     st.write("Custom componants")
     st.write("placeholder")
     st.write("placeholder")
-    with st.container(border=True):
-        st.write("Another test")
-        username = st.text_input("Enter your name")
-        with st.spinner:
-            big_function1(username)
+
