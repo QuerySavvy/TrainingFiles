@@ -402,6 +402,7 @@ if session_state['taco_2'] == True:
                 if session_state['user'] != user:
                     with st.spinner("Running big_function_1"):
                         big_function_1(user)
+                        session_state['user'] = user
                 col_1, col_2, col_3 = st.columns(3)
                 with col_1:
                     size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
