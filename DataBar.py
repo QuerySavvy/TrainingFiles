@@ -12,11 +12,6 @@ def big_function_1(name):
     time.sleep(5)
     st.write(welcome)
 
-def big_function_2(name):
-    welcome = ("🌮 Hi " + name + ". Welcome to Hardis Tacos! 🌮")
-    time.sleep(5)
-    st.write(welcome)
-
 st.title("Open Data Bar - Streamlit Demo")
 session_state = st.session_state
 
@@ -360,7 +355,7 @@ if session_state['make_taco_v3'] == True:
             session_state['order_taco_v1'] = True
             
         if session_state['order_taco_v1'] == True:
-            user = st.text_input("What is your name")
+            user = st.text_input("What is your name:")
             if user:
                 with st.spinner("Running big_function"):
                     big_function(user)
@@ -390,7 +385,7 @@ if order_taco_1:
     session_state['order_taco_v1'] = True
     
 if session_state['order_taco_v1'] == True:
-    user = st.text_input("What is your name",key="order1")
+    user = st.text_input("What is your name:")
     if user:
         with st.spinner("Running big_function"):
             big_function(user)
@@ -419,8 +414,8 @@ if session_state['order_taco_v1'] == True:
             user = st.text_input("What is your name")
             if user:
                 if session_state['user'] != user:
-                    with st.spinner("Running big_function_1"):
-                        big_function_1(user)
+                    with st.spinner("Running big_function"):
+                        big_function(user)
                         session_state['user'] = user
                 col_1, col_2, col_3 = st.columns(3)
                 with col_1:
