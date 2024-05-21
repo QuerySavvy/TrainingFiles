@@ -324,7 +324,7 @@ def big_function1(name):
 
 def big_function2(name):
     time.sleep(3)
-    user = "Hi " + str(name) + ", Welcome to Hardis Tacos!" str(name)
+    user = "Hi " + str(name) + ", Welcome to Hardis Tacos!" + str(name)
     return user
     
     with st.container(border=True):
