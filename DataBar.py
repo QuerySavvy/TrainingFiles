@@ -193,12 +193,12 @@ with page2:
 #Initialise my session states
     if 'disp_session_state' not in session_state:
         session_state['disp_session_state'] = False
-    if 'taco' not in session_state:
-        session_state['taco'] = None
-    if 'taco_2' not in session_state:
-        session_state['taco_2'] = None
-    if 'taco_3' not in session_state:
-        session_state['taco_3'] = None
+    if 'make_taco_v3' not in session_state:
+        session_state['make_taco_v3'] = None
+    if 'order_taco_v1' not in session_state:
+        session_state['order_taco_v1'] = None
+    if 'order_taco_v2' not in session_state:
+        session_state['order_taco_v2'] = None
     if 'user' not in session_state:
         session_state['user'] = None
         
@@ -221,17 +221,18 @@ with page2:
     with st.container(border=True):
         col_1, col_2, col_3 = st.columns(3)
         with col_1:
-            taco1 = st.button("Make a Taco v1")
+            make_taco_1 = st.button("Make a Taco v1")
         with col_2:
-            taco2 = st.button("Make a Taco v2")
+            make_taco_2 = st.button("Make a Taco v2")
         with col_3:
-            taco3 = st.button("Make a Taco v3")
+            make_taco_3 = st.button("Make a Taco v3")
 
 #-------- Taco V1
         
-        if taco1:
-            session_state['taco'] = False
-            session_state['taco_2'] = False
+        if make_taco_1:
+            session_state['make_taco_v3'] = False
+            session_state['order_taco_v1'] = False
+            session_state['order_taco_v2'] = False
             col_1, col_2, col_3 = st.columns(3)
             with col_1:
                 size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
@@ -248,7 +249,7 @@ with page2:
                     st.text("And " + str(sauce) + " Sauce")
 
             code = '''taco = st.button("Make a Taco")
-if taco:
+if make_taco_1:
     col_1, col_2, col_3 = st.columns(3)
     with col_1:
         size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
@@ -265,14 +266,15 @@ if taco:
 
 #-------- Taco v2
                
-        if taco2:
-            session_state['taco'] = False
-            session_state['taco_2'] = False
+        if make_taco_2:
+            session_state['make_taco_v3'] = False
+            session_state['order_taco_v1'] = False
+            session_state['order_taco_v2'] = False
             code = '''taco2 = st.button("Make a Taco")
-if taco2:
-    session_state['taco'] = True
+if make_taco_2:
+    session_state['make_taco_2'] = True
     
-if session_state['taco'] == True:
+if session_state['make_taco_2'] == True:
     col_1, col_2, col_3 = st.columns(3)
     with col_1:
         size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
@@ -288,7 +290,7 @@ if session_state['taco'] == True:
         st.text("And " + str(sauce) + " Sauce")
 '''
             st.code(code, language='python')
-            st.error('''KeyError: 'st.session_state has no key "taco". Did you forget to initialize it? 
+            st.error('''KeyError: 'st.session_state has no key "make_taco_2". Did you forget to initialize it? 
 
 More info: 
 
@@ -296,11 +298,12 @@ https://docs.streamlit.io/library/advanced-features/session-state#initialization
 
 #-------- Taco v3
         
-        if taco3:
-            session_state['taco'] = True
-            session_state['taco_2'] = False
+        if make_taco_3:
+            session_state['make_taco_v3'] = True
+            session_state['order_taco_v1'] = False
+            session_state['order_taco_v2'] = False
                 
-        if session_state['taco'] == True:
+        if session_state['make_taco_v3'] == True:
             col_1, col_2, col_3 = st.columns(3)
             with col_1:
                 size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
@@ -317,14 +320,14 @@ https://docs.streamlit.io/library/advanced-features/session-state#initialization
                 st.text("And " + str(sauce) + " Sauce")
                 st.divider()
             code ='''#Initialise my session states
-if 'taco' not in session_state:
+if 'make_taco_v3' not in session_state:
     session_state['taco'] = None
     
-taco3 = st.button("Make a Taco")
-if taco3:
-    session_state['taco'] = True
+make_taco_3 = st.button("Make a Taco")
+if make_taco_3:
+    session_state['make_taco_v3'] = True
         
-if session_state['taco'] == True:
+if session_state['make_taco_v3'] == True:
     col_1, col_2, col_3 = st.columns(3)
     with col_1:
         size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
@@ -334,28 +337,28 @@ if session_state['taco'] == True:
         sauce = st.multiselect("Choose the sauce",["Allondoise", "Algerienne", "Blanche"])
         
     if size and meat and sauce:
-        st.divider()
         st.text("You have ordered:")
         st.text(size + " Taco")
         st.text("With " + str(meat))
-        st.text("And " + str(sauce) + " Sauce")
-        st.divider()'''
+        st.text("And " + str(sauce) + " Sauce")'''
             st.code(code, language='python')
 
 #-------------------------------------------------------------------------------- Big function 
     with st.container(border=True):
         col_1_, col_2_, col_3_ = st.columns(3)
         with col_1_:
-            taco4 = st.button("Order a taco v1")
+            order_taco_1 = st.button("Order a taco v1")
         with col_2_:
-            taco5 = st.button("Order a taco v2")
+            order_taco_2 = st.button("Order a taco v2")
         with col_3_:
-            taco6 = st.button("Order a taco v3")
+            order_taco_3 = st.button("Order a taco v3")
 #-----Taco 4        
-        if taco4:
-            session_state['taco_2'] = True
-            session_state['taco'] = False
-        if session_state['taco_2'] == True:
+        if order_taco_1:
+            session_state['make_taco_v3'] = False
+            session_state['order_taco_v1'] = True
+            session_state['order_taco_v2'] = False
+            
+        if session_state['order_taco_v1'] == True:
             user = st.text_input("What is your name")
             if user:
                 with st.spinner("Running big_function"):
@@ -375,11 +378,12 @@ if session_state['taco'] == True:
                     st.text("With " + str(meat))
                     st.text("And " + str(sauce) + " Sauce")
                     st.divider()
-            code ='''taco4 = st.button("Order a taco v1")
-if taco4:
-    session_state['taco_2'] = True
-    session_state['taco'] = False
-if session_state['taco_2'] == True:
+            code ='''if order_taco_1:
+    session_state['make_taco_v3'] = False
+    session_state['order_taco_v1'] = True
+    session_state['order_taco_v2'] = False
+    
+if session_state['order_taco_v1'] == True:
     user = st.text_input("What is your name")
     if user:
         with st.spinner("Running big_function"):
@@ -402,12 +406,12 @@ if session_state['taco_2'] == True:
             st.code(code, language='python')
 
 #-----Taco 5            
-        if taco5:
-            session_state['taco_3'] = True
-            session_state['taco_2'] = False
-            session_state['taco'] = False
+        if order_taco_2:
+            session_state['order_taco_v2'] = True
+            session_state['order_taco_v1'] = False
+            session_state['make_taco_v3'] = False
             
-        if session_state['taco_3'] == True:
+        if session_state['order_taco_2'] == True:
             user = st.text_input("What is your name")
             if user:
                 if session_state['user'] != user:
@@ -429,15 +433,18 @@ if session_state['taco_2'] == True:
                     st.text("With " + str(meat))
                     st.text("And " + str(sauce) + " Sauce")
                     st.divider()
-            code ='''taco4 = st.button("Order a taco v1")
-if taco4:
-    session_state['taco_2'] = True
-    session_state['taco'] = False
-if session_state['taco_2'] == True:
+            code ='''if order_taco_2:
+    session_state['order_taco_v2'] = True
+    session_state['order_taco_v1'] = False
+    session_state['make_taco_v3'] = False
+    
+if session_state['order_taco_2'] == True:
     user = st.text_input("What is your name")
     if user:
-        with st.spinner("Running big_function1"):
-            big_function(user)
+        if session_state['user'] != user:
+            with st.spinner("Running big_function_1"):
+                big_function_1(user)
+                session_state['user'] = user
         col_1, col_2, col_3 = st.columns(3)
         with col_1:
             size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
