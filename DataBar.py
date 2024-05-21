@@ -191,7 +191,7 @@ with page2:
             
         if taco1:
             if 'taco' in session_state:
-                session_state['taco'] = None
+                del st.session_state['taco']
             col_1, col_2, col_3 = st.columns(3)
             with col_1:
                 size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
@@ -220,7 +220,7 @@ if taco:
                
         if taco2:
             if 'taco' in session_state:
-                session_state['taco'] = None
+                del st.session_state['taco']
             code = '''taco = st.button("Make a Taco")
 if taco:
     session_state['taco'] = True
