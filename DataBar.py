@@ -355,7 +355,7 @@ if session_state['taco'] == True:
                     st.text("With " + str(meat))
                     st.text("And " + str(sauce) + " Sauce")
                     st.divider()
-                code ='''taco4 = st.button("Order a taco v1")
+            code ='''taco4 = st.button("Order a taco v1")
 if taco4:
     session_state['taco_2'] = True
     session_state['taco'] = False
