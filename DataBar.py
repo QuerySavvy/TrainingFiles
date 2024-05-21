@@ -196,11 +196,11 @@ with page2:
 if taco:
     col_1, col_2, col_3 = st.columns(3)
     with col_1:
-        st.radio("Choose a size",["mini", "une viande", "deux viandes"])
+        size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
     with col_2:
-        st.multiselect("Choose the meat",["Poulet panné", "Cordon bleu", "kebab"])
+        meat = st.multiselect("Choose the meat",["Poulet panné", "Cordon bleu", "kebab"])
     with col_3:
-        st.multiselect("Choose the sauce",["Allondoise", "Algerienne", "Blanche"])
+        sauce = st.multiselect("Choose the sauce",["Allondoise", "Algerienne", "Blanche"])
     if size and meat and sauce:
         st.write("Order:" + size + meat + "with" + sauce + "sauce")'''
             st.code(code, language='python')
