@@ -6,6 +6,12 @@ def big_function(name):
     time.sleep(5)
     st.write(welcome)
 
+@st.cache_data
+def big_function_1(name):
+    welcome = ("🌮 Hi " + name + ". Welcome to Hardis Tacos! 🌮")
+    time.sleep(5)
+    st.write(welcome)
+
 st.title("Open Data Bar - Streamlit Demo")
 session_state = st.session_state
 
@@ -329,7 +335,6 @@ if session_state['taco'] == True:
             st.code(code, language='python')
 
 #-------------------------------------------------------------------------------- Big function 
-    st.write("Page2Selected - outside the container")
     with st.container(border=True):
         taco4 = st.button("Order a taco v1")
         if taco4:
@@ -340,6 +345,57 @@ if session_state['taco'] == True:
             if user:
                 with st.spinner("Running big_function1"):
                     big_function(user)
+                col_1, col_2, col_3 = st.columns(3)
+                with col_1:
+                    size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
+                with col_2:
+                    meat = st.multiselect("Choose the meat",["Poulet panné", "Cordon bleu", "kebab"])
+                with col_3:
+                    sauce = st.multiselect("Choose the sauce",["Allondoise", "Algerienne", "Blanche"])
+                    
+                if size and meat and sauce:
+                    st.divider()
+                    st.text("You have ordered:")
+                    st.text(size + " Taco")
+                    st.text("With " + str(meat))
+                    st.text("And " + str(sauce) + " Sauce")
+                    st.divider()
+            code ='''taco4 = st.button("Order a taco v1")
+if taco4:
+    session_state['taco_2'] = True
+    session_state['taco'] = False
+if session_state['taco_2'] == True:
+    user = st.text_input("What is your name")
+    if user:
+        with st.spinner("Running big_function"):
+            big_function(user)
+        col_1, col_2, col_3 = st.columns(3)
+        with col_1:
+            size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
+        with col_2:
+            meat = st.multiselect("Choose the meat",["Poulet panné", "Cordon bleu", "kebab"])
+        with col_3:
+            sauce = st.multiselect("Choose the sauce",["Allondoise", "Algerienne", "Blanche"])
+            
+        if size and meat and sauce:
+            st.divider()
+            st.text("You have ordered:")
+            st.text(size + " Taco")
+            st.text("With " + str(meat))
+            st.text("And " + str(sauce) + " Sauce")
+            st.divider()'''
+            st.code(code, language='python')
+
+        taco5 = st.button("Order a taco v2")
+        if taco5:
+            session_state['taco_2'] = True
+            session_state['taco'] = False
+            
+        if session_state['taco_2'] == True:
+            user = st.text_input("What is your name")
+            if user:
+                with st.spinner("Running big_function_1"):
+                    big_function_1(user)
                 col_1, col_2, col_3 = st.columns(3)
                 with col_1:
                     size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
@@ -380,7 +436,6 @@ if session_state['taco_2'] == True:
             st.text("And " + str(sauce) + " Sauce")
             st.divider()'''
             st.code(code, language='python')
-    
     
     if session_state['disp_session_state'] == True:
         st.sidebar.header("Session State Info")
