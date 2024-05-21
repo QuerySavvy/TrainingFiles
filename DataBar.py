@@ -547,7 +547,7 @@ with page3:
 
     code = st.text_area("Enter your python code here",height = 100)
     if st.button("Run Code"):
-        with st.container(border = true):
+        with st.container(border = True):
             try:
                 exec(code)
             except Exception as e:
