@@ -355,6 +355,33 @@ if session_state['taco'] == True:
                     st.text("With " + str(meat))
                     st.text("And " + str(sauce) + " Sauce")
                     st.divider()
+                code ='''taco4 = st.button("Order a taco v1")
+if taco4:
+    session_state['taco_2'] = True
+    session_state['taco'] = False
+if session_state['taco_2'] == True:
+    user = st.text_input("What is your name")
+    if user:
+        with st.spinner("Running big_function1"):
+            big_function(user)
+        col_1, col_2, col_3 = st.columns(3)
+        with col_1:
+            size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
+        with col_2:
+            meat = st.multiselect("Choose the meat",["Poulet panné", "Cordon bleu", "kebab"])
+        with col_3:
+            sauce = st.multiselect("Choose the sauce",["Allondoise", "Algerienne", "Blanche"])
+            
+        if size and meat and sauce:
+            st.divider()
+            st.text("You have ordered:")
+            st.text(size + " Taco")
+            st.text("With " + str(meat))
+            st.text("And " + str(sauce) + " Sauce")
+            st.divider()'''
+            st.code(code, language='python')
+    
+    
     if session_state['disp_session_state'] == True:
         st.sidebar.header("Session State Info")
         st.sidebar.write(session_state)
