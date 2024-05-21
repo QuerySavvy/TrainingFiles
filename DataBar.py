@@ -318,7 +318,12 @@ if session_state['taco'] == True:
 
 #-------------------------------------------------------------------------------- Big function 
     st.write("Page2Selected")
+def big_function(name):
+    st.write("Welcome " + name)
+    
     with st.container(border=True):
+        user = st.text_input("What is your name ?")
+        big_function(name)
         st.write("Page2Selected")
 
 
