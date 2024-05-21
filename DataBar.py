@@ -294,7 +294,7 @@ https://docs.streamlit.io/library/advanced-features/session-state#initialization
 if 'taco' not in session_state:
     session_state['taco'] = None
     
-    taco3 = st.button("Make a Taco")
+taco3 = st.button("Make a Taco")
 if taco3:
     session_state['taco'] = True
         
