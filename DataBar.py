@@ -328,7 +328,7 @@ if session_state['taco'] == True:
         taco4 = st.button("Order a taco v1")
         if taco4:
             session_state['taco_2'] = True
-        if session_state['taco_2'] = True:
+        if session_state['taco_2'] == True:
             user = st.text_input("What is your name")
             if user:
                 with st.spinner("Running big_function1"):
