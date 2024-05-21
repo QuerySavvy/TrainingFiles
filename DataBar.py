@@ -247,7 +247,7 @@ with page2:
                     st.text("With " + str(meat))
                     st.text("And " + str(sauce) + " Sauce")
 
-            code = '''taco = st.button("Make a Taco")
+            code = '''make_taco_1 = st.button("Make a Taco")
 if make_taco_1:
     col_1, col_2, col_3 = st.columns(3)
     with col_1:
@@ -270,7 +270,7 @@ if make_taco_1:
             session_state['order_taco_v1'] = False
             session_state['order_taco_v2'] = False
             session_state['order_taco_v3'] = False
-            code = '''taco2 = st.button("Make a Taco")
+            code = '''make_taco_2 = st.button("Make a Taco")
 if make_taco_2:
     session_state['make_taco_2'] = True
     
@@ -356,8 +356,8 @@ if session_state['make_taco_v3'] == True:
 #-----Taco 4        
         if order_taco_1:
             session_state['make_taco_v3'] = False
-            session_state['order_taco_v2'] = False
             session_state['order_taco_v1'] = True
+            session_state['order_taco_v2'] = False
             session_state['order_taco_v3'] = False
             st.rerun()
             
@@ -388,8 +388,9 @@ if session_state['make_taco_v3'] == True:
 
 if order_taco_1:
     session_state['make_taco_v3'] = False
-    session_state['order_taco_v2'] = False
     session_state['order_taco_v1'] = True
+    session_state['order_taco_v2'] = False
+    session_state['order_taco_v3'] = False
     
 if session_state['order_taco_v1'] == True:
     user = st.text_input("What is your name:")
@@ -414,8 +415,8 @@ if session_state['order_taco_v1'] == True:
 #-----Taco 5            
         if order_taco_2:
             session_state['make_taco_v3'] = False
-            session_state['order_taco_v2'] = True
             session_state['order_taco_v1'] = False
+            session_state['order_taco_v2'] = True
             session_state['order_taco_v3'] = False
             st.rerun()
             
@@ -448,8 +449,9 @@ if session_state['order_taco_v1'] == True:
 
         if order_taco_2:
             session_state['make_taco_v3'] = False
-            session_state['order_taco_v2'] = True
             session_state['order_taco_v1'] = False
+            session_state['order_taco_v2'] = True
+            session_state['order_taco_v3'] = False
             
         if session_state['order_taco_v2'] == True:
             user = st.text_input("What is your name:")
@@ -476,8 +478,8 @@ if session_state['order_taco_v1'] == True:
 #-----Taco 5
         if order_taco_3:
             session_state['make_taco_v3'] = False
-            session_state['order_taco_v2'] = False
             session_state['order_taco_v1'] = False
+            session_state['order_taco_v2'] = False
             session_state['order_taco_v3'] = True
             st.rerun()
             
@@ -507,12 +509,13 @@ if session_state['order_taco_v1'] == True:
     time.sleep(5)
     st.write(welcome)
 
-        if order_taco_2:
+        if order_taco_3:
             session_state['make_taco_v3'] = False
-            session_state['order_taco_v2'] = True
             session_state['order_taco_v1'] = False
+            session_state['order_taco_v2'] = False
+            session_state['order_taco_v3'] = True
             
-        if session_state['order_taco_v2'] == True:
+        if session_state['order_taco_v3'] == True:
             user = st.text_input("What is your name:")
             if user:
                 if session_state['user'] != user: 
