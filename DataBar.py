@@ -263,26 +263,45 @@ More info:
 
 https://docs.streamlit.io/library/advanced-features/session-state#initialization''')
 
-    if taco3:
-        session_state['taco'] = True
-            
-    if session_state['taco'] == True:
-        col_1, col_2, col_3 = st.columns(3)
-        with col_1:
-            size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
-        with col_2:
-            meat = st.multiselect("Choose the meat",["Poulet panné", "Cordon bleu", "kebab"])
-        with col_3:
-            sauce = st.multiselect("Choose the sauce",["Allondoise", "Algerienne", "Blanche"])
-            
-        if size and meat and sauce:
-            st.divider()
-            st.text("You have ordered:")
-            st.text(size + " Taco")
-            st.text("With " + str(meat))
-            st.text("And " + str(sauce) + " Sauce")
-            st.divider()
-
+        if taco3:
+            session_state['taco'] = True
+                
+        if session_state['taco'] == True:
+            col_1, col_2, col_3 = st.columns(3)
+            with col_1:
+                size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
+            with col_2:
+                meat = st.multiselect("Choose the meat",["Poulet panné", "Cordon bleu", "kebab"])
+            with col_3:
+                sauce = st.multiselect("Choose the sauce",["Allondoise", "Algerienne", "Blanche"])
+                
+            if size and meat and sauce:
+                st.divider()
+                st.text("You have ordered:")
+                st.text(size + " Taco")
+                st.text("With " + str(meat))
+                st.text("And " + str(sauce) + " Sauce")
+                st.divider()
+            code ='''if taco3:
+    session_state['taco'] = True
+        
+if session_state['taco'] == True:
+    col_1, col_2, col_3 = st.columns(3)
+    with col_1:
+        size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
+    with col_2:
+        meat = st.multiselect("Choose the meat",["Poulet panné", "Cordon bleu", "kebab"])
+    with col_3:
+        sauce = st.multiselect("Choose the sauce",["Allondoise", "Algerienne", "Blanche"])
+        
+    if size and meat and sauce:
+        st.divider()
+        st.text("You have ordered:")
+        st.text(size + " Taco")
+        st.text("With " + str(meat))
+        st.text("And " + str(sauce) + " Sauce")
+        st.divider()'''
+            st.code(code, language='python')
     
     st.write("session state")
     st.write("placeholder")
