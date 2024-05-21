@@ -239,8 +239,9 @@ if taco:
         if taco2:
             session_state['taco'] = False
             code = '''taco = st.button("Make a Taco")
-if taco:
+if taco2:
     session_state['taco'] = True
+    
 if session_state['taco'] == True:
     col_1, col_2, col_3 = st.columns(3)
     with col_1:
