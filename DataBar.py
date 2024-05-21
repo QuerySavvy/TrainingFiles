@@ -186,6 +186,9 @@ with page2:
             taco1 = st.button("Make a Taco v1")
         with col_2:
             taco2 = st.button("Make a Taco v2")
+        with col_3:
+            taco3 = st.button("Make a Taco v3")
+            
         if taco1:
             col_1, col_2, col_3 = st.columns(3)
             with col_1:
@@ -234,6 +237,21 @@ if session_state['taco'] == True:
 More info: 
 
 https://docs.streamlit.io/library/advanced-features/session-state#initialization''')
+
+    if taco3:
+        if 'taco' not in session_state:
+            session_state['taco'] = 'True'
+            
+    col_1, col_2, col_3 = st.columns(3)
+    with col_1:
+        size = st.radio("Choose a size",["mini", "une viande", "deux viandes"])
+    with col_2:
+        meat = st.multiselect("Choose the meat",["Poulet panné", "Cordon bleu", "kebab"])
+    with col_3:
+        sauce = st.multiselect("Choose the sauce",["Allondoise", "Algerienne", "Blanche"])
+        
+    if size and meat and sauce:
+        st.write("Order:" + size + meat + " with" + sauce + "sauce")
 
     
     st.write("session state")
