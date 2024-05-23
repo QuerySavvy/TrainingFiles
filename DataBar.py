@@ -540,8 +540,6 @@ if session_state['order_taco_v3'] == True:
         st.sidebar.write(session_state)
 
 with page3:
-    st.write("Custom componants")
-
     with st.container(border = True):
         st.header("Python coding engine")
         code = st.text_area("Enter your python code here",height = 100)
@@ -551,5 +549,3 @@ with page3:
             except Exception as e:
                 st.error(f"Error: {e}")
     
-    st.write("placeholder")
-    st.write("placeholder")
